@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuiz Shqip | Testoni Njohuritë Tuaja</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0f1115;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .shqip-gradient {
+            background: linear-gradient(135deg, #E41B17 0%, #ff4b4b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-gradient {
+            background: linear-gradient(180deg, rgba(30,30,35,0.7) 0%, rgba(20,20,20,0.9) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .option-card {
+            background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .option-card:hover {
+            border-color: #E41B17;
+            background: rgba(228, 27, 23, 0.1);
+            transform: translateX(10px);
+        }
+
+        .option-card.correct {
+            border-color: #22c55e;
+            background: rgba(34, 197, 94, 0.2);
+        }
+
+        .option-card.wrong {
+            border-color: #ef4444;
+            background: rgba(239, 68, 68, 0.2);
+        }
+
+        .bg-grid-pattern {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .float-icon {
+            position: absolute;
+            color: rgba(228, 27, 23, 0.2);
+            font-weight: 800;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 6px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: #E41B17;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+
+        .page-section {
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .word-card {
+            border-left: 4px solid #E41B17;
+            background: rgba(255,255,255,0.03);
+            transition: transform 0.3s ease;
+        }
+        .word-card:hover {
+            transform: scale(1.02);
+            background: rgba(255,255,255,0.05);
+        }
+    </style>
+</head>
+<body class="bg-grid-pattern relative min-h-screen">
+
+    <div class="float-icon text-9xl top-20 left-10 opacity-20">?</div>
+    <div class="float-icon text-8xl bottom-40 right-10 opacity-20">?</div>
+    <div class="float-icon text-6xl top-1/2 right-1/4 opacity-10">!</div>
+
+    <nav class="fixed w-full z-50 px-6 py-4" id="navbar">
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass-nav p-4 rounded-2xl border border-white/5 bg-black/40 backdrop-blur-md">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="showView('landing-view')">
+                <div class="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center font-bold text-white">K</div>
+                <div class="text-xl font-bold tracking-tight">Kuiz<span class="text-red-500">Shqip</span></div>
+            </div>
+            
+            <div id="nav-links" class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <button onclick="showView('landing-view')" class="hover:text-white transition-colors">Kreu</button>
+                <button onclick="showView('fjalori-view')" class="hover:text-white transition-colors text-red-400 font-bold">Fjalori</button>
+                <button onclick="showView('about-view')" class="hover:text-white transition-colors">Rreth Nesh</button>
+                <button onclick="showView('contact-view')" class="hover:text-white transition-colors">Kontakt</button>
+            </div>
+
+            <div id="quiz-status" class="hidden flex items-center gap-4">
+                <div class="text-sm font-bold text-gray-400">Pikët: <span id="score-display" class="text-white">0</span></div>
+            </div>
+
+            <button onclick="startQuiz()" id="nav-play-btn" class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full text-sm font-bold transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(220,38,38,0.5)]">
+                Luaj Tani
+            </button>
+        </div>
+    </nav>
+
+    <main class="relative z-10">
+        
+        <!-- LANDING VIEW -->
+        <div id="landing-view" class="page-section">
+            <section id="kreu" class="min-h-screen flex flex-col justify-center items-center px-6 text-center relative pt-20">
+                <div class="z-10 max-w-4xl">
+                    <div class="inline-block mb-4 px-4 py-1 rounded-full border border-red-500/30 bg-red-500/10 text-red-400 text-xs font-semibold tracking-wider uppercase" id="badge">
+                        Kuizi #1 në Shqipëri
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight mb-6 leading-tight" id="hero-title">
+                        Sfidoni njohuritë tuaja <br>
+                        <span class="shqip-gradient">Shqiptare & Botërore</span>
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 opacity-0" id="hero-text">
+                        Mësoni, argëtohuni dhe fitoni pikë. Zbuloni sa mirë e njihni historinë, gjeografinë, gjuhën shqipe dhe kulturën tonë.
+                    </p>
+                    
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-4 opacity-0" id="hero-cta">
+                        <button onclick="startQuiz()" class="w-full md:w-auto px-8 py-4 bg-white text-black rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2 group">
+                            Fillo Kuizin
+                            <span class="group-hover:translate-x-1 transition-transform">→</span>
+                        </button>
+                        <button onclick="showView('fjalori-view')" class="w-full md:w-auto px-8 py-4 bg-white/5 border border-white/10 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors">
+                            Eksploro Fjalorin
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="w-full border-y border-white/5 bg-black/20 backdrop-blur-sm py-8">
+                <div class="max-w-7xl mx-auto flex flex-wrap justify-around items-center gap-8 text-center">
+                    <div class="stat-item">
+                        <div class="text-4xl font-bold text-red-500 counter" data-target="20">0</div>
+                        <div class="text-sm text-gray-400 uppercase tracking-wider">Pyetje</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="text-4xl font-bold text-red-500 counter" data-target="1">0</div>
+                        <div class="text-sm text-gray-400 uppercase tracking-wider">Kategori</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="text-4xl font-bold text-red-500 counter" data-target="50">0</div>
+                        <div class="text-sm text-gray-400 uppercase tracking-wider">Fjalë të Vjetra</div>
+                    </div>
+                </div>
+            </div>
+
+            <section id="kategorite" class="py-32 px-6">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                        <div>
+                            <h2 class="text-4xl md:text-5xl font-bold mb-4">Zgjidhni Kategorinë</h2>
+                            <p class="text-gray-400">Tematikat më të pëlqyera nga lojtarët tanë.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div onclick="startQuiz('Historia')" class="cat-card card-gradient p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 cursor-pointer group">
+                            <div class="w-14 h-14 bg-red-500/20 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-red-500 group-hover:text-white transition-colors">🏰</div>
+                            <h3 class="text-xl font-bold mb-2">Historia</h3>
+                            <p class="text-sm text-gray-400">Nga Ilirët tek Skënderbeu. Testoni njohuritë historike.</p>
+                        </div>
+                        <div onclick="startQuiz('Gjeografia')" class="cat-card card-gradient p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 cursor-pointer group">
+                            <div class="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-500 group-hover:text-white transition-colors">🌍</div>
+                            <h3 class="text-xl font-bold mb-2">Gjeografia</h3>
+                            <p class="text-sm text-gray-400">Qytetet, lumenjtë dhe vendet turistike të trojeve shqiptare.</p>
+                        </div>
+                        <div onclick="startQuiz('Muzika')" class="cat-card card-gradient p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 cursor-pointer group">
+                            <div class="w-14 h-14 bg-yellow-500/20 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-yellow-500 group-hover:text-white transition-colors">🎵</div>
+                            <h3 class="text-xl font-bold mb-2">Arti & Muzika</h3>
+                            <p class="text-sm text-gray-400">Artistët tanë dhe këngët e pavdekshme popullore.</p>
+                        </div>
+                        <div onclick="startQuiz('Gjuha Shqipe')" class="cat-card card-gradient p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 cursor-pointer group">
+                            <div class="w-14 h-14 bg-green-500/20 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-green-500 group-hover:text-white transition-colors">📚</div>
+                            <h3 class="text-xl font-bold mb-2">Gjuha Shqipe</h3>
+                            <p class="text-sm text-gray-400">Gramatikë, sintaksë dhe drejtshkrim në gjuhën shqipe.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- FJALORI VIEW (NEW PAGE) -->
+        <div id="fjalori-view" class="hidden page-section min-h-screen pt-32 px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-6xl font-bold mb-4 shqip-gradient">Fjalori i Harruar</h2>
+                    <p class="text-gray-400 text-lg">Fjalë të vjetra shqipe që po fillojnë të dalin nga përdorimi.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="fjalori-container">
+                    <!-- Fjalët do të mbushen nga JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT VIEW -->
+        <div id="about-view" class="hidden page-section min-h-screen pt-32 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-bold mb-8 shqip-gradient">Rreth Nesh</h2>
+                <div class="card-gradient rounded-3xl p-8 md:p-12 text-gray-300 leading-relaxed text-lg">
+                    <p class="mb-6">Kuiz Shqip është një projekt i lindur nga pasioni për dije dhe dëshira për të promovuar kulturën shqiptare në sferën dixhitale. Ne besojmë se të mësuarit duhet të jetë një proces argëtues dhe interaktiv.</p>
+                    <p class="mb-6">Qëllimi ynë është të ofrojmë platformën më të pasur me pyetje në gjuhën shqipe, duke mbuluar çdo fushë të jetës: nga historia jonë e lashtë deri te teknologjia moderne.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+                        <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+                            <div class="text-red-500 font-bold text-xl mb-2">Misioni</div>
+                            <p class="text-sm text-gray-400">Edukimi përmes lojës.</p>
+                        </div>
+                        <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+                            <div class="text-red-500 font-bold text-xl mb-2">Vizioni</div>
+                            <p class="text-sm text-gray-400">Komuniteti më i madh i dijes.</p>
+                        </div>
+                        <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+                            <div class="text-red-500 font-bold text-xl mb-2">Vlerat</div>
+                            <p class="text-sm text-gray-400">Saktësia dhe Argëtimi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT VIEW -->
+        <div id="contact-view" class="hidden page-section min-h-screen pt-32 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-bold mb-8 shqip-gradient">Na Kontaktoni</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card-gradient rounded-3xl p-8">
+                        <h3 class="text-2xl font-bold mb-6">Dërgoni Mesazh</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm text-gray-400 mb-2">Emri</label>
+                                <input type="text" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-500 outline-none transition-all" placeholder="Emri juaj">
+                            </div>
+                            <div>
+                                <label class="block text-sm text-gray-400 mb-2">Email</label>
+                                <input type="email" class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-500 outline-none transition-all" placeholder="email@shembull.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm text-gray-400 mb-2">Mesazhi</label>
+                                <textarea class="w-full bg-white/5 border border-white/10 rounded-xl p-4 focus:border-red-500 outline-none transition-all h-32" placeholder="Si mund t'ju ndihmojmë?"></textarea>
+                            </div>
+                            <button class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl transition-all">Dërgo Mesazhin</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <div class="card-gradient rounded-3xl p-8">
+                            <h4 class="font-bold text-xl mb-4">Info Kontakti</h4>
+                            <div class="space-y-4 text-gray-400">
+                                <p class="flex items-center gap-3">📍 Lushnje, Shqipëri</p>
+                                <p class="flex items-center gap-3">📧 info@kuizshqip.al</p>
+                                <p class="flex items-center gap-3">📱 +355 6X XX XX XXX</p>
+                            </div>
+                        </div>
+                        <div class="card-gradient rounded-3xl p-8">
+                            <h4 class="font-bold text-xl mb-4">Rrjetet Sociale</h4>
+                            <div class="flex gap-4">
+                                <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center hover:bg-red-500/20 cursor-pointer transition-all">FB</div>
+                                <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center hover:bg-red-500/20 cursor-pointer transition-all">IG</div>
+                                <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center hover:bg-red-500/20 cursor-pointer transition-all">TK</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRIVACY VIEW -->
+        <div id="privacy-view" class="hidden page-section min-h-screen pt-32 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-bold mb-8 shqip-gradient">Privatësia</h2>
+                <div class="card-gradient rounded-3xl p-8 md:p-12 text-gray-400 leading-relaxed">
+                    <h3 class="text-white font-bold text-2xl mb-4">Mbrojtja e të dhënave</h3>
+                    <p class="mb-6">Ne respektojmë privatësinë tuaj. Ky aplikacion nuk mbledh të dhëna personale të ndjeshme pa pëlqimin tuaj. Pikët tuaja ruhen lokalisht për të mbajtur historikun e lojës.</p>
+                    <h3 class="text-white font-bold text-2xl mb-4">Cookies</h3>
+                    <p class="mb-6">Ne përdorim cookie minimale teknike për të siguruar funksionimin e saktë të kuizit dhe ruajtjen e preferencave tuaja.</p>
+                    <h3 class="text-white font-bold text-2xl mb-4">Të drejtat tuaja</h3>
+                    <p>Ju keni të drejtë të kërkoni fshirjen e historikut tuaj të lojës në çdo kohë përmes opsioneve të aplikacionit.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- QUIZ VIEW -->
+        <div id="quiz-view" class="hidden page-section min-h-screen pt-32 px-6 pb-10">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <div class="flex justify-between text-sm text-gray-400 mb-2 font-semibold">
+                        <span>Pyetja <span id="current-q-num">1</span> nga <span id="total-q-num">10</span></span>
+                        <span id="category-badge" class="text-red-500 uppercase tracking-widest text-xs">Mikse</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progress-fill"></div>
+                    </div>
+                </div>
+
+                <div class="card-gradient rounded-3xl p-8 md:p-12 mb-8 relative overflow-hidden" id="question-card">
+                    <div class="absolute top-0 right-0 p-8 opacity-5 text-9xl font-extrabold text-white pointer-events-none select-none">?</div>
+                    <h2 class="text-2xl md:text-4xl font-bold leading-tight mb-8" id="question-text">Ngarkimi i pyetjes...</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="options-container"></div>
+                </div>
+
+                <div class="flex justify-end opacity-0" id="quiz-controls">
+                    <button onclick="nextQuestion()" class="bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition-colors flex items-center gap-2">
+                        Vazhdo →
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESULTS VIEW -->
+        <div id="results-view" class="hidden page-section min-h-screen flex items-center justify-center px-6">
+            <div class="max-w-2xl w-full text-center">
+                <div class="inline-block text-6xl mb-6">🏆</div>
+                <h2 class="text-4xl md:text-6xl font-bold mb-4">Përfundoi!</h2>
+                <div class="card-gradient rounded-3xl p-8 mb-10 border border-red-500/20">
+                    <div class="text-sm text-gray-400 uppercase tracking-widest mb-2">Pikët Tuaja</div>
+                    <div class="text-6xl font-extrabold text-white mb-2"><span id="final-score">0</span><span class="text-2xl text-gray-500">/100</span></div>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <button onclick="startQuiz()" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-xl font-bold transition-all">Provo Përsëri</button>
+                    <button onclick="showView('landing-view')" class="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-bold transition-all">Kthehu në Kreu</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="border-t border-white/10 pt-20 pb-10 px-6 bg-black mt-20">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <div class="text-2xl font-bold mb-2">Kuiz<span class="text-red-600">Shqip</span></div>
+                <p class="text-gray-500 text-sm">Platforma më e madhe e dijeve në gjuhën shqipe.</p>
+            </div>
+            <div class="flex gap-6 text-sm text-gray-400">
+                <button onclick="showView('about-view')" class="hover:text-white">Rreth Nesh</button>
+                <button onclick="showView('privacy-view')" class="hover:text-white">Privatësia</button>
+                <button onclick="showView('contact-view')" class="hover:text-white">Kontakt</button>
+            </div>
+        </div>
+        <div class="text-center mt-10 text-xs text-gray-600">
+            &copy; 2026 KuizShqip. Të gjitha të drejtat e rezervuara.
+        </div>
+    </footer>
+
+    <script>
+        const allQuestions = [
+            { question: "Cila fjali ka kryefjalë të nënkuptuar dhe kundrinor të drejtë?", options: ["Nxënësi lexon librin.", "Lexoj librin çdo mbrëmje.", "Libri lexohet nga nxënësi.", "Nxënësit po lexojnë."], correct: 1 },
+            { question: "Në cilën fjali “i bukur” është pjesë e kallëzuesit?", options: ["Djali i bukur po vjen.", "Djali, i bukur dhe i zgjuar, po vjen.", "Djali është i bukur.", "I bukuri erdhi sot."], correct: 2 },
+            { question: "Cila fjali është e përbërë me varësi?", options: ["Ai lexon dhe shkruan.", "Ai lexon librin.", "Kur erdhi mësuesi, filloi ora.", "Nxënësit po mësojnë."], correct: 2 },
+            { question: "Cila fjalë është përemër vetor në trajtë të shkurtër?", options: ["librin", "ai", "ia", "vetë"], correct: 2 },
+            { question: "Në cilën fjali ka dy kundrinorë?", options: ["Ai lexon librin.", "Ia dhashë librin shokut.", "Shkon në shkollë.", "Erdhi dje."], correct: 1 },
+            { question: "Cila fjali është dëftore, por shpreh këshillë?", options: ["Mos fol shumë!", "Do ishte mirë të mësoje.", "A po mëson?", "Mëso tani."], correct: 1 },
+            { question: "Cila fjali ka rend të përmbysur të gjymtyrëve?", options: ["Nxënësi lexon librin.", "Librin lexon nxënësi.", "Nxënësit po mësojnë.", "Ai po vjen."], correct: 1 },
+            { question: "Në cilën fjali “me librin” është kundrinor i zhdrejtë?", options: ["Erdhi me librin në dorë.", "Libri është mbi tavolinë.", "Lexoi librin.", "Libri është i ri."], correct: 0 },
+            { question: "Cila fjali është pyetëse pa shenjë pikëpyetjeje?", options: ["Kush erdhi sot", "A po vjen nesër", "Sa bukur është", "Të gjitha"], correct: 3 },
+            { question: "Cila fjali ka kallëzues emëror?", options: ["Djali vrapon.", "Djali është nxënës.", "Djali lexon librin.", "Djali po mëson."], correct: 1 },
+            { question: "Cila është dallimi kryesor mes fabulës dhe subjektit?", options: ["Fabula ka personazhe", "Subjekti është më i shkurtër", "Fabula ndjek rendin kohor të ngjarjeve", "Nuk ka dallim"], correct: 2 },
+            { question: "Cila figurë letrare përdoret në shprehjen “zemra më digjej”?", options: ["Krahasim", "Personifikim", "Metaforë", "Epitet"], correct: 2 },
+            { question: "Cila poezi quhet lirike?", options: ["Poezia me dialog", "Poezia që tregon një histori", "Poezia që shpreh ndjenja personale", "Poezia me shumë personazhe"], correct: 2 },
+            { question: "Çfarë është personazhi kolektiv?", options: ["Personazh kryesor", "Personazh i imagjinuar", "Një grup që vepron si një personazh", "Personazh negativ"], correct: 2 },
+            { question: "Cila figurë letrare i jep sendeve cilësi njerëzore?", options: ["Metafora", "Krahasimi", "Personifikimi", "Hiperbola"], correct: 2 },
+            { question: "Migjeni dallohet sepse:", options: ["Shkruan për heronj historikë", "Zbukuronte realitetin", "Tregonte realitetin e hidhur shoqëror", "Shkruante vetëm poezi dashurie"], correct: 2 },
+            { question: "Cila vepër është menduar kryesisht për t’u luajtur?", options: ["Poezia", "Tregimi", "Drama", "Eseja"], correct: 2 },
+            { question: "Çfarë është monologu?", options: ["Bisedë mes dy personave", "Mendim i brendshëm i personazhit", "Përshkrim i vendit", "Rrëfim i autorit"], correct: 1 },
+            { question: "Rima shërben kryesisht për:", options: ["Tregim të gjatë", "Bukuri tingëllore në poezi", "Shpjegim idesh", "Argumentim"], correct: 1 },
+            { question: "Qëllimi kryesor i figurave letrare është:", options: ["Të sqarojnë rregulla", "Të zbukurojnë dhe forcojnë shprehjen", "Të japin informacion", "Të tregojnë kohën"], correct: 1 }
+        ];
+
+        const fjaletEHarruara = [
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+            { fjala: "Test", kuptimi: "Test." },
+        ];
+
+        let activeQuestions = [];
+        let currentQuestion = 0;
+        let score = 0;
+        let isAnswering = false;
+
+        function showView(viewId) {
+            const views = ['landing-view', 'about-view', 'contact-view', 'privacy-view', 'quiz-view', 'results-view', 'fjalori-view'];
+            views.forEach(id => {
+                const el = document.getElementById(id);
+                if (id === viewId) {
+                    el.classList.remove('hidden');
+                    gsap.fromTo(el, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 });
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+
+            if (viewId === 'quiz-view' || viewId === 'results-view') {
+                document.getElementById('nav-links').classList.add('hidden');
+                document.getElementById('nav-play-btn').classList.add('hidden');
+                document.getElementById('quiz-status').classList.remove('hidden');
+            } else {
+                document.getElementById('nav-links').classList.remove('hidden');
+                document.getElementById('nav-play-btn').classList.remove('hidden');
+                document.getElementById('quiz-status').classList.add('hidden');
+            }
+
+            if (viewId === 'fjalori-view') {
+                populateFjalori();
+            }
+
+            window.scrollTo(0, 0);
+        }
+
+        function populateFjalori() {
+            const container = document.getElementById('fjalori-container');
+            container.innerHTML = '';
+            fjaletEHarruara.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'word-card p-6 rounded-2xl';
+                card.innerHTML = `
+                    <h4 class="text-xl font-bold text-red-500 mb-2">${item.fjala}</h4>
+                    <p class="text-gray-300 text-sm">${item.kuptimi}</p>
+                `;
+                container.appendChild(card);
+            });
+            gsap.from(".word-card", { opacity: 0, y: 20, stagger: 0.1, duration: 0.5 });
+        }
+
+        function startQuiz(category = 'Mikse') {
+            activeQuestions = [...allQuestions].sort(() => Math.random() - 0.5).slice(0, 5);
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('category-badge').innerText = category;
+            document.getElementById('total-q-num').innerText = activeQuestions.length;
+            updateStats();
+            showView('quiz-view');
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            if (currentQuestion >= activeQuestions.length) {
+                showResults();
+                return;
+            }
+            const qData = activeQuestions[currentQuestion];
+            const qText = document.getElementById('question-text');
+            const optsContainer = document.getElementById('options-container');
+            const nextBtn = document.getElementById('quiz-controls');
+
+            nextBtn.style.opacity = "0";
+            nextBtn.style.pointerEvents = "none";
+            isAnswering = true;
+
+            document.getElementById('current-q-num').innerText = currentQuestion + 1;
+            const progressPct = (currentQuestion / activeQuestions.length) * 100;
+            document.getElementById('progress-fill').style.width = `${progressPct}%`;
+
+            gsap.to(qText, { opacity: 0, y: -10, duration: 0.2, onComplete: () => {
+                qText.innerText = qData.question;
+                gsap.to(qText, { opacity: 1, y: 0, duration: 0.2 });
+            }});
+
+            optsContainer.innerHTML = '';
+            qData.options.forEach((opt, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-card text-left p-6 rounded-xl text-lg font-medium w-full flex justify-between items-center group';
+                btn.innerHTML = `<span>${opt}</span><span class="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity">→</span>`;
+                btn.onclick = () => selectOption(index, btn);
+                optsContainer.appendChild(btn);
+            });
+            gsap.from(".option-card", { y: 20, opacity: 0, duration: 0.4, stagger: 0.1, ease: "power2.out" });
+        }
+
+        function selectOption(selectedIndex, btnElement) {
+            if (!isAnswering) return;
+            isAnswering = false;
+            const correctIndex = activeQuestions[currentQuestion].correct;
+            const allBtns = document.querySelectorAll('.option-card');
+            if (selectedIndex === correctIndex) {
+                btnElement.classList.add('correct');
+                score += 20;
+            } else {
+                btnElement.classList.add('wrong');
+                allBtns[correctIndex].classList.add('correct');
+            }
+            allBtns.forEach(btn => btn.style.pointerEvents = 'none');
+            updateStats();
+            gsap.to("#quiz-controls", { opacity: 1, pointerEvents: "all", duration: 0.3, delay: 0.4 });
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            loadQuestion();
+        }
+
+        function updateStats() {
+            const scoreEl = document.getElementById('score-display');
+            gsap.to(scoreEl, { innerText: score, duration: 0.5, snap: { innerText: 1 } });
+        }
+
+        function showResults() {
+            document.getElementById('final-score').innerText = score;
+            showView('results-view');
+        }
+
+        window.addEventListener('load', () => {
+            gsap.registerPlugin(ScrollTrigger);
+            const heroTl = gsap.timeline();
+            heroTl.from("#badge", { y: -20, opacity: 0, duration: 0.8, ease: "power2.out" })
+                  .from("#hero-title", { y: 50, opacity: 0, duration: 1, ease: "power4.out" }, "-=0.4")
+                  .to("#hero-text", { y: 0, opacity: 1, duration: 1 }, "-=0.6")
+                  .to("#hero-cta", { opacity: 1, y: 0, duration: 0.8 }, "-=0.5");
+
+            gsap.to(".float-icon", {
+                y: -20, rotation: 10, duration: 3, yoyo: true, repeat: -1, ease: "sine.inOut", stagger: 1
+            });
+
+            gsap.from(".cat-card", {
+                scrollTrigger: { trigger: "#kategorite", start: "top 85%" },
+                y: 60, opacity: 0, stagger: 0.1, duration: 0.8, ease: "back.out(1.7)"
+            });
+
+            gsap.utils.toArray(".counter").forEach(counter => {
+                const target = counter.getAttribute("data-target");
+                ScrollTrigger.create({
+                    trigger: counter,
+                    start: "top 90%",
+                    onEnter: () => {
+                        gsap.to(counter, { innerText: target, duration: 2, snap: { innerText: 1 }, ease: "power2.out" });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
