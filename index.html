@@ -33,6 +33,9 @@
             background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
+            opacity: 1 !important;
+            min-height: 70px;
+            visibility: visible !important;
         }
 
         .option-card:hover {
@@ -319,10 +322,10 @@
                     </div>
                 </div>
 
-                <div class="card-gradient rounded-3xl p-8 md:p-12 mb-8 relative overflow-hidden" id="question-card">
+                <div class="card-gradient rounded-3xl p-8 md:p-12 mb-8 relative" id="question-card">
                     <div class="absolute top-0 right-0 p-8 opacity-5 text-9xl font-extrabold text-white pointer-events-none select-none">?</div>
                     <h2 class="text-2xl md:text-4xl font-bold leading-tight mb-8" id="question-text">Ngarkimi i pyetjes...</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="options-container"></div>
+                    <div class="grid grid-cols-1 gap-4 w-full" id="options-container"></div>
                 </div>
 
                 <div class="flex justify-end opacity-0" id="quiz-controls">
