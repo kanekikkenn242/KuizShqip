@@ -129,7 +129,7 @@
 
     <main class="relative z-10">
         
-        <!-- LANDING VIEW -->
+        
         <div id="landing-view" class="page-section">
             <section id="kreu" class="min-h-screen flex flex-col justify-center items-center px-6 text-center relative pt-20">
                 <div class="z-10 max-w-4xl">
@@ -161,7 +161,7 @@
             <div class="w-full border-y border-white/5 bg-black/20 backdrop-blur-sm py-8">
                 <div class="max-w-7xl mx-auto flex flex-wrap justify-around items-center gap-8 text-center">
                     <div class="stat-item">
-                        <div class="text-4xl font-bold text-red-500 counter" data-target="20">0</div>
+                        <div class="text-4xl font-bold text-red-500 counter" data-target="40">0</div>
                         <div class="text-sm text-gray-400 uppercase tracking-wider">Pyetje</div>
                     </div>
                     <div class="stat-item">
@@ -210,7 +210,7 @@
             </section>
         </div>
 
-        <!-- FJALORI VIEW (NEW PAGE) -->
+        
         <div id="fjalori-view" class="hidden page-section min-h-screen pt-32 px-6">
             <div class="max-w-5xl mx-auto">
                 <div class="text-center mb-12">
@@ -219,12 +219,12 @@
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="fjalori-container">
-                    <!-- Fjalët do të mbushen nga JS -->
+                    
                 </div>
             </div>
         </div>
 
-        <!-- ABOUT VIEW -->
+        
         <div id="about-view" class="hidden page-section min-h-screen pt-32 px-6">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-4xl md:text-6xl font-bold mb-8 shqip-gradient">Rreth Nesh</h2>
@@ -249,7 +249,7 @@
             </div>
         </div>
 
-        <!-- CONTACT VIEW -->
+        
         <div id="contact-view" class="hidden page-section min-h-screen pt-32 px-6">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-4xl md:text-6xl font-bold mb-8 shqip-gradient">Na Kontaktoni</h2>
@@ -294,7 +294,7 @@
             </div>
         </div>
 
-        <!-- PRIVACY VIEW -->
+        
         <div id="privacy-view" class="hidden page-section min-h-screen pt-32 px-6">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-4xl md:text-6xl font-bold mb-8 shqip-gradient">Privatësia</h2>
@@ -309,7 +309,7 @@
             </div>
         </div>
 
-        <!-- QUIZ VIEW -->
+        
         <div id="quiz-view" class="hidden page-section min-h-screen pt-32 px-6 pb-10">
             <div class="max-w-4xl mx-auto">
                 <div class="mb-8">
@@ -336,7 +336,7 @@
             </div>
         </div>
 
-        <!-- RESULTS VIEW -->
+        
         <div id="results-view" class="hidden page-section min-h-screen flex items-center justify-center px-6">
             <div class="max-w-2xl w-full text-center">
                 <div class="inline-block text-6xl mb-6">🏆</div>
@@ -392,7 +392,27 @@
             { question: "Cila vepër është menduar kryesisht për t’u luajtur?", options: ["Poezia", "Tregimi", "Drama", "Eseja"], correct: 2 },
             { question: "Çfarë është monologu?", options: ["Bisedë mes dy personave", "Mendim i brendshëm i personazhit", "Përshkrim i vendit", "Rrëfim i autorit"], correct: 1 },
             { question: "Rima shërben kryesisht për:", options: ["Tregim të gjatë", "Bukuri tingëllore në poezi", "Shpjegim idesh", "Argumentim"], correct: 1 },
-            { question: "Qëllimi kryesor i figurave letrare është:", options: ["Të sqarojnë rregulla", "Të zbukurojnë dhe forcojnë shprehjen", "Të japin informacion", "Të tregojnë kohën"], correct: 1 }
+            { question: "Qëllimi kryesor i figurave letrare është:", options: ["Të sqarojnë rregulla", "Të zbukurojnë dhe forcojnë shprehjen", "Të japin informacion", "Të tregojnë kohën"], correct: 1 },
+            { question: "Cila fjali ka kuptim figurativ?", options: ["Ai hapi derën ngadalë.", "Koha fluturon shpejt.", "Ai vrapoi shpejt.", "Dielli perëndon."], correct: 1 },
+            { question: "Në cilën fjali fjala “si” përdoret për krahasim?", options: ["Si erdhe sot?", "Ai është si vëlla për mua.", "Si quhesh?", "Si mësove kaq mirë?"], correct: 1 },
+            { question: "Cila fjali shpreh këshillë pa qenë urdhër?", options: ["Mëso tani!", "Mos fol!", "Do ishte mirë të pushoje pak.", "Pusho menjëherë!"], correct: 2 },
+            { question: "Cila fjali ka rend jo të zakonshëm të fjalëve?", options: ["Nxënësi lexon librin.", "Nxënësit po mësojnë.", "Librin lexon nxënësi.", "Ai po vjen sot."], correct: 2 },
+            { question: "Në cilën fjali fjala e theksuar është përdorur gabim?", options: ["Ai punon më shumë se dje.", "Ky është nxënësi më i mirë.", "Ai vrapon më shpejtë.", "Kjo detyrë është më e vështirë."], correct: 2 },
+            { question: "Cila fjali ka kuptim të dyfishtë?", options: ["Ai lexon librin.", "Ajo pa djalin me dylbi.", "Nxënësit po mësojnë.", "Libri është interesant."], correct: 1 },
+            { question: "Në cilën fjali fjala “dritë” ka kuptim figurativ?", options: ["Drita e llambës u fik.", "Hapi dritën e dhomës.", "Ai ishte dritë për familjen.", "Drita hyri nga dritarja."], correct: 2 },
+            { question: "Cila fjali ka kryefjalë të nënkuptuar?", options: ["Nxënësi po mëson.", "Ajo lexon librin.", "Lexoj çdo ditë.", "Libri ështė i ri."], correct: 2 },
+            { question: "Cila fjali është pyetëse pa fjalë pyetëse?", options: ["Kush erdhi sot?", "A po vjen nesër?", "Sa bukur është?", "Pse u vonove?"], correct: 1 },
+            { question: "Cila fjali është dëftore, por shpreh këshillë?", options: ["Ulu tani!", "Mos fol!", "Do ishte mirë të mësoje më shumë.", "A po mëson?"], correct: 2 },
+            { question: "Çfarë shpreh poezia lirike?", options: ["Ngjarje historike", "Ndjenja personale", "Dialog mes personazheve", "Rregulla"], correct: 1 },
+            { question: "Kur themi se një personazh është simbolik?", options: ["Kur është real", "Kur përfaqëson një ide ose grup njerëzish", "Kur flet shumë", "Kur është dytësor"], correct: 1 },
+            { question: "Cila figurë letrare përdoret për zbukurim?", options: ["Metafora", "Epiteti", "Ironia", "Alegoria"], correct: 1 },
+            { question: "Cila figurë përdor teprim?", options: ["Krahasimi", "Epiteti", "Metafora", "Hiperbola"], correct: 3 },
+            { question: "Çfarë është mesazhi i një vepre?", options: ["Ngjarja kryesore", "Personazhi kryesor", "Mendimi që autori do të përcjellë", "Titulli"], correct: 2 },
+            { question: "Cila vepër mbështetet më shumë te dialogu?", options: ["Poezia", "Drama", "Eseja", "Proza poetike"], correct: 1 },
+            { question: "Migjeni njihet sepse:", options: ["Idealizon jetën", "Shkruan për natyrën", "Tregon jetën e vështirë të njerëzve", "Shkruan vetëm poezi dashurie"], correct: 2 },
+            { question: "Çfarë është fabula?", options: ["Idetë e autorit", "Radhitja e ngjarjeve sipas kohës", "Personazhet", "Mesazhi"], correct: 1 },
+            { question: "Cila figurë i jep sendeve cilësi njerëzore?", options: ["Metafora", "Krahasimi", "Personifikimi"], correct: 2 },
+            { question: "Qëllimi i letërsisë artistike është:", options: ["Të japë informacion", "Të zbukurojë gjuhën dhe të shprehë ndjenja", "Të japë urdhra", "Të shpjegojë rregulla"], correct: 1 }
         ];
 
         const fjaletEHarruara = [
