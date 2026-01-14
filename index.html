@@ -484,7 +484,7 @@
         }
 
         function startQuiz(category = 'Mikse') {
-            activeQuestions = [...allQuestions].sort(() => Math.random() - 0.5).slice(0, 5);
+            activeQuestions = [...allQuestions].sort(() => Math.random() - 0.5).slice(0, 10);
             currentQuestion = 0;
             score = 0;
             document.getElementById('category-badge').innerText = category;
