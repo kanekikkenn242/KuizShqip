@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #0f1115;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.shqip-gradient {
+    background: linear-gradient(135deg, #E41B17 0%, #ff4b4b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-gradient {
+    background: linear-gradient(180deg, rgba(30,30,35,0.7) 0%, rgba(20,20,20,0.9) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.option-card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    opacity: 1 !important;
+    min-height: 70px;
+    visibility: visible !important;
+}
+
+.option-card:hover {
+    border-color: #E41B17;
+    background: rgba(228, 27, 23, 0.1);
+    transform: translateX(10px);
+}
+
+.option-card.correct {
+    border-color: #22c55e;
+    background: rgba(34, 197, 94, 0.2);
+}
+
+.option-card.wrong {
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.2);
+}
+
+.bg-grid-pattern {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.float-icon {
+    position: absolute;
+    color: rgba(228, 27, 23, 0.2);
+    font-weight: 800;
+    user-select: none;
+    pointer-events: none;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 6px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #E41B17;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.page-section {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.word-card {
+    border-left: 4px solid #E41B17;
+    background: rgba(255,255,255,0.03);
+    transition: transform 0.3s ease;
+}
+
+.word-card:hover {
+    transform: scale(1.02);
+    background: rgba(255,255,255,0.05);
+}
