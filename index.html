@@ -215,10 +215,21 @@
             <div class="max-w-5xl mx-auto">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl md:text-6xl font-bold mb-4 shqip-gradient">Fjalët që po humbasin</h2>
-                    <p class="text-gray-400 text-lg">Fjalor ku përfshin fjalë të vjetra shqipe që po humbasin përdorimin
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="fjalori-container">
-                    
+                    <p class="text-gray-400 text-lg">Fjalor ku përfshin fjalë të vjetra shqipe që po humbasin përdorimin</p>
+                </div>
+
+                <div class="mb-16">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-gray-100">Fjalë të Vjetra</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="fjalori-container">
+                        
+                    </div>
+                </div>
+
+                <div class="mb-16">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-gray-100">Shprehjet Frazelogjike</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="fraselogjike-container">
+                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -442,7 +453,7 @@
             { fjala: "Shpergenj", kuptimi: "Brez për të lidhur femijët në djepe" },
             { fjala: "Odat ", kuptimi: "Dhomë për miqtë" },
             { fjala: "Postiqe", kuptimi: "Gëzof i deles" },
-            { fjala: "Tunci", kuptimi: "Tundëse qumshti" },
+            { fjala: "Tunci", kuptimi: "Tundëse qumështi" },
             { fjala: "Gyp", kuptimi: "Tub prej druri" },
             { fjala: "Korbulla", kuptimi: "Vend për të ruajtur produktet bulmore" },
             { fjala: "Gajtanr", kuptimi: "Fije e trashë" },
@@ -475,6 +486,24 @@
             { fjala: "Vrragë", kuptimi: "Plagë e vjetër" },
             { fjala: "Kacek", kuptimi: "Copë bukë e fortë" },
             { fjala: "Sahan", kuptimi: "Pjatë metalike" },
+            
+        ];
+
+        const shprehjeFrazelogjike = [
+            { shprehja: "", kuptimi: "" },
+            { shprehja: "", kuptimi: "" },
+            { shprehja: "", kuptimi: "" },
+            { shprehja: "", kuptimi: "" },
+            { shprehja: "", kuptimi: "" },
+            { shprehja: "", kuptimi: "" },
+            { shprehja: "", kuptimi: "" },
+            { shprehja: "", kuptimi: "" },
+            { shprehja: "", kuptimi: "" },
+            { shprehja: "", kuptimi: "" },
+            { shprehja: "", kuptimi: "" },
+            { shprehja: "", kuptimi: "" },
+            { shprehja: "", kuptimi: "" },
+            { shprehja: "", kuptimi: "" },
             
         ];
 
@@ -514,7 +543,10 @@
 
         function populateFjalori() {
             const container = document.getElementById('fjalori-container');
+            const fraseContainer = document.getElementById('fraselogjike-container');
             container.innerHTML = '';
+            fraseContainer.innerHTML = '';
+            
             fjaletEHarruara.forEach(item => {
                 const card = document.createElement('div');
                 card.className = 'word-card p-6 rounded-2xl';
@@ -524,6 +556,17 @@
                 `;
                 container.appendChild(card);
             });
+            
+            shprehjeFrazelogjike.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'word-card p-6 rounded-2xl';
+                card.innerHTML = `
+                    <h4 class="text-xl font-bold text-orange-500 mb-2">"${item.shprehja}"</h4>
+                    <p class="text-gray-300 text-sm">${item.kuptimi}</p>
+                `;
+                fraseContainer.appendChild(card);
+            });
+            
             gsap.from(".word-card", { opacity: 0, y: 20, stagger: 0.1, duration: 0.5 });
         }
 
