@@ -325,7 +325,7 @@
                 <div class="mb-8">
                     <div class="flex justify-between text-sm text-gray-400 mb-2 font-semibold">
                         <span>Pyetja <span id="current-q-num">1</span> nga <span id="total-q-num">10</span></span>
-                        <span id="category-badge" class="text-red-500 uppercase tracking-widest text-xs">Mikse</span>
+                        <span id="category-badge" class="text-red-500 uppercase tracking-widest text-xs">Të përziera</span>
                     </div>
                     <div class="progress-bar-container">
                         <div class="progress-bar" id="progress-fill"></div>
@@ -570,7 +570,7 @@
             gsap.from(".word-card", { opacity: 0, y: 20, stagger: 0.1, duration: 0.5 });
         }
 
-        function startQuiz(category = 'Mikse') {
+        function startQuiz(category = 'Të përziera') {
             activeQuestions = [...allQuestions].sort(() => Math.random() - 0.5).slice(0, 10);
             currentQuestion = 0;
             score = 0;
