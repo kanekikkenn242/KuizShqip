@@ -66,6 +66,8 @@ const allQuestions = {
         { question: "\"Krahëhapur\" përdoret zakonisht në kuptim:", options: ["të drejtpërdrejtë", "figurativ", "shkencor", "teknik"], correct: 1 }
     ],
     letërsia: [
+        { question: "Kush u zgjodh kryetar te Kongresi i Manastirit?", options: ["Gjergj Fishta", "Parashqevi Qiriazi", "Luigj Gurakuqi", "Ndre Mjeda"], correct: 0 },
+        { question: "Cila vepër është cilësuar si Iliada shqiptare?", options: ["Bagëti e bujqësi", "Poema e mjerimit", "Lahuta e Malcis", "Martesa e Halilit"], correct: 2 },
         { question: "\"Bagëti e Bujqësi\" është vepër e:", options: ["Migjeni", "Naim Frashëri", "Kadare", "Fishta"], correct: 1 },
         { question: "Migjeni trajton kryesisht:", options: ["dashurinë", "mjerimin shoqësor", "natyrën", "mitologjinë"], correct: 1 },
         { question: "\"Kronikë në gur\" është shkruar nga:", options: ["Naim Frashëri", "Ismail Kadare", "Fan Noli", "Fishta"], correct: 1 },
