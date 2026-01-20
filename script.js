@@ -1,5 +1,7 @@
 const allQuestions = {
     gramatika: [
+        { question: "Në fjalinë \"Pse më shikon me habi?\", çfarë është \"pse\"?", options: ["Kundrinor i drejtë", "Rrethanor", "Kryefjalë", "Kallëzues"], correct: 1 },
+        { question: "Sa përemra ka në këtë fjali: \"Ky libër u kujtonte të gjithëve se çdokush mund ta humbiste veten kur ndodhej në situata të tilla\"?", options: ["4", "5", "6", "7"], correct: 2 },
         { question: "Fjala \"nxënësit\" është:", options: ["emër njëjës", "emër shumës", "mbiemër", "përemër"], correct: 1 },
         { question: "Cila fjali ka kryefjalë të nënkuptuar?", options: ["Ai lexon librin", "Nxënësi mëson", "Lexoj çdo ditë", "Libri është i ri"], correct: 2 },
         { question: "Fjala \"më\" është:", options: ["emër", "lidhëz", "përemër vetor", "pjesëz"], correct: 2 },
@@ -65,8 +67,8 @@ const allQuestions = {
         { question: "Fjala \"shpresë\" ka kuptim:", options: ["konkret", "abstrakt", "teknik", "dialektor"], correct: 1 },
         { question: "\"Krahëhapur\" përdoret zakonisht në kuptim:", options: ["të drejtpërdrejtë", "figurativ", "shkencor", "teknik"], correct: 1 }
     ],
-    letërsia: [
-        { question: "Kush u zgjodh kryetar te Kongresi i Manastirit?", options: ["Gjergj Fishta", "Parashqevi Qiriazi", "Luigj Gurakuqi", "Ndre Mjeda"], correct: 0 },
+    letërsia: [ 
+        { question: "Kush u zgjodh kryetar te Kongresi i Manastirit?", options: ["Gjergj Fishta", "Parashqevi Qiriazi", "Luigj Gurakuqi", "Mit'hat Frashëri"], correct: 3 },
         { question: "Cila vepër është cilësuar si Iliada shqiptare?", options: ["Bagëti e bujqësi", "Poema e mjerimit", "Lahuta e Malcis", "Martesa e Halilit"], correct: 2 },
         { question: "\"Bagëti e Bujqësi\" është vepër e:", options: ["Migjeni", "Naim Frashëri", "Kadare", "Fishta"], correct: 1 },
         { question: "Migjeni trajton kryesisht:", options: ["dashurinë", "mjerimin shoqësor", "natyrën", "mitologjinë"], correct: 1 },
@@ -88,6 +90,7 @@ const allQuestions = {
         { question: "Proza dallon nga poezia sepse:", options: ["ka rimë", "nuk ka vargje", "ka figurë", "ka ndjenja"], correct: 1 },
         { question: "Personazhet dytësore janë:", options: ["kryesorët", "më pak të rëndësishëm", "rrëfimtarë", "autorë"], correct: 1 },
         { question: "Letërsia shqipe është:", options: ["vetëm moderne", "vetëm e vjetër", "kombëtare", "e huaj"], correct: 2 }
+
     ]
 };
 
