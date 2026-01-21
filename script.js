@@ -1,5 +1,8 @@
 const allQuestions = {
     gramatika: [
+        { question: "A është përdorur si duhet përemri vetor në fjalinë \"Neve do të shkojmë në bibliotekë\"?", options: ["Po", "Jo", "Nuk dihet", "Nuk ka përemër vetor"], correct: 1 },
+        { question: "Në fjalinë \"Ku shkon?\", fjala \"ku\" është:", options: ["Pjesëz", "Lidhëz", "Ndajfolje", "Pasthirrmë"], correct: 2 },
+        { question: "Në fjalinë \"Mbaroi së lexuari\", shprehja \"së lexuari\" është:", options: ["Folje", "Mbiemër", "Emër prejfoljor asnjanës", "Ndajfolje"], correct: 2 },
         { question: "Në fjalinë \"Pse më shikon me habi?\", çfarë është \"pse\"?", options: ["Kundrinor i drejtë", "Rrethanor", "Kryefjalë", "Kallëzues"], correct: 1 },
         { question: "Sa përemra ka në këtë fjali: \"Ky libër u kujtonte të gjithëve se çdokush mund ta humbiste veten kur ndodhej në situata të tilla\"?", options: ["4", "5", "6", "7"], correct: 2 },
         { question: "Fjala \"nxënësit\" është:", options: ["emër njëjës", "emër shumës", "mbiemër", "përemër"], correct: 1 },
