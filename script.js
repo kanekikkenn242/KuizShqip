@@ -105,7 +105,6 @@ const allQuestions = {
         { question: "Migjeni i përket:", options: ["romantizmit", "realizmit", "simbolizmit", "klasicizmit"], correct: 1 },
         { question: "Kadare njihet për:", options: ["poezi lirike", "romane", "drama", "përralla"], correct: 1 },
         { question: "Rima përdoret në:", options: ["prozë", "poezi", "lajm", "tekst shkencor"], correct: 1 },
-        { question: "Autori tregon:", options: ["lexuesin", "ngjarjen", "veprën", "personazhin"], correct: 1 },
         { question: "Fabula është:", options: ["morali", "ngjarja kryesore", "përshkrimi", "dialogu"], correct: 1 },
         { question: "Tema është:", options: ["personazhi", "ideja kryesore", "vendi", "koha"], correct: 1 },
         { question: "Proza dallon nga poezia sepse:", options: ["ka rimë", "nuk ka vargje", "ka figurë", "ka ndjenja"], correct: 1 },
