@@ -1,5 +1,9 @@
 const allQuestions = {
     gramatika: [
+        { question: "Cila fjali është e thjeshtë?", options: ["Ai filloi të fliste.", "E dija ku do të dilje.", "Shkoi që të niste një jetë të re.", "Prisni sa të pushojë shiu"], correct: 0 },
+        { question: "Forma e pashtjelluar e foljes \"pa punuar\" është:", options: ["pjesore", "paskajore", "mohore", "përcjellore"], correct: 2 },
+        { question: "Folja \"mund\" te grupi i fjalëve \"mund të shprehet\" është folje:", options: ["modale", "gjysmëndihmëse", "ndihmëse", "me kuptim të plotë leksikor"], correct: 0 },
+        { question: "Forma e pashtjelluar e foljes \"pa punuar\" është:", options: ["pjesore", "paskajore", "mohore", "përcjellore"], correct: 2 },
         { question: "Kaltërsia e qiellit humbi në muzgun e mbrëmjes, është:", options: ["dykryegjymtyrëshe", "njëkryegjymtyrëshe", "njëkryegjymtyrëshe foljore", "fjalia përcaktore"], correct: 0 },
         { question: "Dielli i kuq zjarri, është:", options: ["njëkryegjymtyrëshe emërore", "njëkryegjymtyrëshe", "njëkryegjymtyrëshe foljore", "fjalia foljore e zgjeruar"], correct: 0 },
         { question: "Diku gjëmon, është:", options: ["njëkryegjymtyrëshe foljore", "njëkryegjymtyrëshe emërore", "dykryegjymtyrëshe e pazgjeruar", "fjalia e plotë"], correct: 0 },
@@ -36,6 +40,7 @@ const allQuestions = {
         { question: "Fjalia \"Të lexosh është mirë\" ka kryefjalë:", options: ["emër", "mbiemër", "folje", "përemër"], correct: 2 }
     ],
     drejtshkrimi: [
+        { question: "Cila fjalë është shkruar gabim?", options: ["Gjithsecili", "Kurrkund", "Gjithnjë", "Kurrekush"], correct: 3 },
         { question: "Cila është shkruar saktë?", options: ["Shkolla ime", "shkolla Ime", "shkolla ime", "Shkolla Ime"], correct: 2 },
         { question: "Cila fjalë shkruhet me ç?", options: ["cante", "çantë", "carape", "corape"], correct: 1 },
         { question: "Fjalia me presje të saktë është:", options: ["Kur erdhi mësuesi filloi ora", "Kur erdhi, mësuesi filloi ora", "Kur erdhi mësuesi, filloi ora", "Kur, erdhi mësuesi filloi ora"], correct: 2 },
@@ -58,6 +63,7 @@ const allQuestions = {
         { question: "Cila është shkruar drejt?", options: ["bashkpunim", "bashkëpunim", "bashkepunim", "bashkpunimi"], correct: 1 }
     ],
     leksiologjia: [
+        { question: "Dallo fjalën e parme.", options: ["Bregore", "Bregdetar", "Bregdet", "Breg"], correct: 3 },
         { question: "Sinonim i \"i gëzuar\":", options: ["i mërzitur", "i lumtur", "i lodhur", "i heshtur"], correct: 1 },
         { question: "Antonim i \"i madh\":", options: ["i gjatë", "i vogël", "i gjerë", "i trashë"], correct: 1 },
         { question: "\"Zemërgur\" ka kuptim:", options: ["të drejtpërdrejtë", "figurativ", "shkencor", "teknik"], correct: 1 },
@@ -80,6 +86,7 @@ const allQuestions = {
         { question: "\"Krahëhapur\" përdoret zakonisht në kuptim:", options: ["të drejtpërdrejtë", "figurativ", "shkencor", "teknik"], correct: 1 }
     ],
     letërsia: [ 
+        { question: "Figura letrare: \"Puhia e lehtë rrudhte sipërfaqen e detit\" është:", options: ["epitet", "simbol", "metaforë", "antitezë"], correct: 2 },
         { question: "Kush u zgjodh kryetar te Kongresi i Manastirit?", options: ["Gjergj Fishta", "Parashqevi Qiriazi", "Luigj Gurakuqi", "Mit'hat Frashëri"], correct: 3 },
         { question: "Cila vepër është cilësuar si Iliada shqiptare?", options: ["Bagëti e bujqësi", "Poema e mjerimit", "Lahuta e Malcis", "Martesa e Halilit"], correct: 2 },
         { question: "\"Bagëti e Bujqësi\" është vepër e:", options: ["Migjeni", "Naim Frashëri", "Kadare", "Fishta"], correct: 1 },
