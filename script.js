@@ -40,6 +40,8 @@ const allQuestions = {
         { question: "Fjalia \"Të lexosh është mirë\" ka kryefjalë:", options: ["emër", "mbiemër", "folje", "përemër"], correct: 2 }
     ],
     drejtshkrimi: [
+        { question: "Është shkruar saktë fjala:", options: ["Për së gjalli", "Përsë gjalli", "Për sëgjalli", "Përsëgjalli"], correct: 3 },
+        { question: "Cila fjalë është shkruar saktë?", options: ["Gjithesekush", "Gjithe sekush", "Gjith se kush", "Gjithsekush"], correct: 3 },
         { question: "Cila fjalë është shkruar gabim?", options: ["Gjithsecili", "Kurrkund", "Gjithnjë", "Kurrekush"], correct: 3 },
         { question: "Cila është shkruar saktë?", options: ["Shkolla ime", "shkolla Ime", "shkolla ime", "Shkolla Ime"], correct: 2 },
         { question: "Cila fjalë shkruhet me ç?", options: ["cante", "çantë", "carape", "corape"], correct: 1 },
