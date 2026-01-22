@@ -1,5 +1,14 @@
 const allQuestions = {
     gramatika: [
+        { question: "Kaltërsia e qiellit humbi në muzgun e mbrëmjes, është:", options: ["dykryegjymtyrëshe", "njëkryegjymtyrëshe", "njëkryegjymtyrëshe foljore", "fjalia përcaktore"], correct: 0 },
+        { question: "Dielli i kuq zjarri, është:", options: ["njëkryegjymtyrëshe emërore", "njëkryegjymtyrëshe", "njëkryegjymtyrëshe foljore", "fjalia foljore e zgjeruar"], correct: 0 },
+        { question: "Diku gjëmon, është:", options: ["njëkryegjymtyrëshe foljore", "njëkryegjymtyrëshe emërore", "dykryegjymtyrëshe e pazgjeruar", "fjalia e plotë"], correct: 0 },
+        { question: "Në fjalinë \"Asgjë nuk pipëtinte\", gjymtyra kryesore shprehet me:", options: ["përemër i pacaktuar", "përemër pronor", "përemër lidhor", "përemër dëftor"], correct: 0 },
+        { question: "Në fjalinë \"Shkronjat qenë shtypur me dy ngjyra të ndryshme\", kallëzuesi është:", options: ["kallëzues emëror", "kallëzues i përbërë", "kallëzues foljor i thjeshtë", "folje veprore"], correct: 2 },
+        { question: "Fusha e Rugës Pal, emërton:", options: ["një mjedis loje", "një rrugë", "një fshat", "një mal"], correct: 0 },
+        { question: "Fusha e djemve të lumtur të fshatit, është:", options: ["emërore përshkruese", "foljore e zgjeruar", "kallëzore", "njëkryegjymtyrëshe"], correct: 0 },
+        { question: "E kuqja e kaltër e magjiplotë qiellore ndërtohet me:", options: ["emër dhe mbiemra", "vetëm emra", "folje dhe emra", "ndajfolje"], correct: 0 },
+        { question: "S’kishte kënaqësi më të madhe, gjymtyra e dytë është:", options: ["kundrinor", "përcaktor kallëzuesor", "rrethanor", "kryefjalë"], correct: 1 },
         { question: "A është përdorur si duhet përemri vetor në fjalinë \"Neve do të shkojmë në bibliotekë\"?", options: ["Po", "Jo", "Nuk dihet", "Nuk ka përemër vetor"], correct: 1 },
         { question: "Në fjalinë \"Ku shkon?\", fjala \"ku\" është:", options: ["Pjesëz", "Lidhëz", "Ndajfolje", "Pasthirrmë"], correct: 2 },
         { question: "Në fjalinë \"Mbaroi së lexuari\", shprehja \"së lexuari\" është:", options: ["Folje", "Mbiemër", "Emër prejfoljor asnjanës", "Ndajfolje"], correct: 2 },
