@@ -1,5 +1,8 @@
 const allQuestions = {
     gramatika: [
+        { question: "Cila ka parafjalë:", options: ["Tani sapo hyri brenda", "I ati po e priste poshtë shkallëve", "Ai i hodhi poshtë të gjitha fjalët e kota që kishte dëgjuar", "U enda vërdallë gati më shumë se një orë"], correct: 1 },
+        { question: "“Ju hapa zemrën, se më krijuat besim.” është nënrenditje:", options: ["Ftilluese", "Kundrinore", "Kryefjalore", "Shkakore"], correct: 3 },
+        { question: "Fjala “jam” është përdorur si këpujë:", options: ["Nxënësi i fundit është i ri në klasë", "Nxënësi i ri është në klasë", "Jam duke punuar për një projekt të ri", "Ai qe mësuar me të gjithë ne"], correct: 0 },
         { question: "Cila fjali është e thjeshtë?", options: ["Ai filloi të fliste.", "E dija ku do të dilje.", "Shkoi që të niste një jetë të re.", "Prisni sa të pushojë shiu"], correct: 0 },
         { question: "Forma e pashtjelluar e foljes \"pa punuar\" është:", options: ["pjesore", "paskajore", "mohore", "përcjellore"], correct: 2 },
         { question: "Folja \"mund\" te grupi i fjalëve \"mund të shprehet\" është folje:", options: ["modale", "gjysmëndihmëse", "ndihmëse", "me kuptim të plotë leksikor"], correct: 0 },
@@ -43,15 +46,11 @@ const allQuestions = {
         { question: "Është shkruar saktë fjala:", options: ["Për së gjalli", "Përsë gjalli", "Për sëgjalli", "Përsëgjalli"], correct: 3 },
         { question: "Cila fjalë është shkruar saktë?", options: ["Gjithesekush", "Gjithe sekush", "Gjith se kush", "Gjithsekush"], correct: 3 },
         { question: "Cila fjalë është shkruar gabim?", options: ["Gjithsecili", "Kurrkund", "Gjithnjë", "Kurrekush"], correct: 3 },
-        { question: "Cila është shkruar saktë?", options: ["Shkolla ime", "shkolla Ime", "shkolla ime", "Shkolla Ime"], correct: 2 },
-        { question: "Fjalia me presje të saktë është:", options: ["Kur erdhi mësuesi filloi ora", "Kur erdhi, mësuesi filloi ora", "Kur erdhi mësuesi, filloi ora", "Kur, erdhi mësuesi filloi ora"], correct: 2 },
-        { question: "Cila fjali mbyllet me pikëçuditëse?", options: ["A po vjen", "Mos ik", "Sa bukur është deti", "Kur erdhi"], correct: 2 },
         { question: "Cila fjalë ka ë të patheksuar?", options: ["dritë", "bukë", "nxënës", "fletore"], correct: 2 },
         { question: "Cila është shkruar drejt?", options: ["përëndim", "perëndim", "perendim", "përendim"], correct: 1 },
         { question: "Dy pika (:) përdoren për:", options: ["pyetje", "listim", "habi", "mohim"], correct: 1 },
         { question: "Cila fjali ka pikësim të saktë?", options: ["Ai tha se, do të vijë", "Ai tha se do të vijë", "Ai, tha se do të vijë", "Ai tha, se do të vijë"], correct: 1 },
         { question: "Presja përdoret për:", options: ["ndarje fjalësh", "ndarje fjalisë", "ndarje paragrafësh", "mbyllje teksti"], correct: 1 },
-        { question: "Cila fjalë ka shkronjë të madhe?", options: ["nxënës", "shqipëri", "Shqipëri", "shqiperi"], correct: 2 },
         { question: "Cila është shkruar drejt?", options: ["bashkpunim", "bashkëpunim", "bashkepunim", "bashkpunimi"], correct: 1 }
     ],
     leksiologjia: [
@@ -78,6 +77,12 @@ const allQuestions = {
         { question: "\"Krahëhapur\" përdoret zakonisht në kuptim:", options: ["të drejtpërdrejtë", "figurativ", "shkencor", "teknik"], correct: 1 }
     ],
     letërsia: [ 
+        { question: "Përkatësoni te Kreshnikëve pjesa:", options: ["Djali i nënës dhe e Bukura e Dheut", "Dielli dhe Hëna", "Muji dhe Halili", "Halili dhe zanat"], correct: 2 },
+        { question: "Rretho alternativën e gabuar. Tekstet letrare kanë për qëllim:", options: ["Edukimin artistik të lexuesit", "Edukimin me shijen e së bukurës", "Sjelljen e informacionit", "Pasurimin e imagjinatës"], correct: 2 },
+        { question: "Cili nga romanet nuk është shkruar nga Dritëro Agolli?", options: ["Prilli i thyer", "Njeriu me top", "Arka e djallit", "Shkëlqimi dhe rënia e shokut Zylo"], correct: 0 },
+        { question: "Cili autor është quajtur 'Homeri i letërsisë shqipe'?", options: ["Migjeni", "Lasgush Poradeci", "Gjergj Fishta", "Mitrush Kuteli"], correct: 2 },
+        { question: "Soneti përbëhet nga:", options: ["Dy strofa treshe dhe një katërshe", "Dy strofa katërshe dhe dy treshe", "Dy strofa dyshe dhe dy katërshe", "Dy strofa treshe dhe dy katërshe"], correct: 1 },
+        { question: "Naim Frashëri në 'Bagëti e Bujqësia' ka përdorur:", options: ["Vargun 12 rrokësh", "Vargun 14 rrokësh", "Vargun 10 rrokësh", "Vargun 8 rrokësh"], correct: 1 },
         { question: "Figura letrare: \"Puhia e lehtë rrudhte sipërfaqen e detit\" është:", options: ["epitet", "simbol", "metaforë", "antitezë"], correct: 2 },
         { question: "Kush u zgjodh kryetar te Kongresi i Manastirit?", options: ["Gjergj Fishta", "Parashqevi Qiriazi", "Luigj Gurakuqi", "Mit'hat Frashëri"], correct: 3 },
         { question: "Cila vepër është cilësuar si Iliada shqiptare?", options: ["Bagëti e bujqësi", "Poema e mjerimit", "Lahuta e Malcis", "Martesa e Halilit"], correct: 2 },
