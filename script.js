@@ -45,7 +45,6 @@ const allQuestions = {
         { question: "Cila fjalë është shkruar gabim?", options: ["Gjithsecili", "Kurrkund", "Gjithnjë", "Kurrekush"], correct: 3 },
         { question: "Cila është shkruar saktë?", options: ["Shkolla ime", "shkolla Ime", "shkolla ime", "Shkolla Ime"], correct: 2 },
         { question: "Fjalia me presje të saktë është:", options: ["Kur erdhi mësuesi filloi ora", "Kur erdhi, mësuesi filloi ora", "Kur erdhi mësuesi, filloi ora", "Kur, erdhi mësuesi filloi ora"], correct: 2 },
-        { question: "Cila është shkruar gabim?", options: ["nxënës", "shokë", "mesues", "shkollë"], correct: 2 },
         { question: "Cila fjali mbyllet me pikëçuditëse?", options: ["A po vjen", "Mos ik", "Sa bukur është deti", "Kur erdhi"], correct: 2 },
         { question: "Cila fjalë ka ë të patheksuar?", options: ["dritë", "bukë", "nxënës", "fletore"], correct: 2 },
         { question: "Cila është shkruar drejt?", options: ["përëndim", "perëndim", "perendim", "përendim"], correct: 1 },
@@ -53,7 +52,6 @@ const allQuestions = {
         { question: "Cila fjali ka pikësim të saktë?", options: ["Ai tha se, do të vijë", "Ai tha se do të vijë", "Ai, tha se do të vijë", "Ai tha, se do të vijë"], correct: 1 },
         { question: "Presja përdoret për:", options: ["ndarje fjalësh", "ndarje fjalisë", "ndarje paragrafësh", "mbyllje teksti"], correct: 1 },
         { question: "Cila fjalë ka shkronjë të madhe?", options: ["nxënës", "shqipëri", "Shqipëri", "shqiperi"], correct: 2 },
-        { question: "Cila fjali ka pikë në fund?", options: ["A po vjen", "Mos ik!", "Ai po lexon", "Sa bukur!"], correct: 2 },
         { question: "Cila është shkruar drejt?", options: ["bashkpunim", "bashkëpunim", "bashkepunim", "bashkpunimi"], correct: 1 }
     ],
     leksiologjia: [
