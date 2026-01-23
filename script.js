@@ -1,19 +1,17 @@
-
 const allQuestions = {
     gramatika: [
-        { question: "Cila ka parafjalë:", options: ["Tani sapo hyri brenda", "I ati po e priste poshtë shkallëve", "Ai i hodhi poshtë të gjitha fjalët e kota që kishte dëgjuar", "U enda vërda e..."], correct: 0 },
+        { question: "Cila fjali ka parafjalë:", options: ["Tani sapo hyri brenda", "I ati po e priste poshtë shkallëve", "Ai i hodhi poshtë të gjitha fjalët e kota që kishte dëgjuar", "U enda vërdallë"], correct: 2 },
         { question: "“Ju hapa zemrën, se më krijuat besim.” është nënrenditje:", options: ["Ftilluese", "Kundrinore", "Kryefjalore", "Shkakore"], correct: 3 },
-        { question: "Fjala “jam” është përdorur si këpujë:", options: ["Nxënësi i fundit është i ri në klasë", "Nxënësi i ri është në klasë", "Jam duke punuar për një projekt të...","Opsion i plotësuar"], correct: 2 },
+        { question: "Fjala “jam” është përdorur si këpujë:", options: ["Nxënësi i fundit është i ri në klasë", "Nxënësi i ri është në klasë", "Jam duke punuar për një projekt të...", "Opsion i plotësuar"], correct: 2 },
         { question: "Cila fjali është e thjeshtë?", options: ["Ai filloi të fliste.", "E dija ku do të dilje.", "Shkoi që të niste një jetë të re.", "Prisni sa të pushojë shiu"], correct: 0 },
         { question: "Forma e pashtjelluar e foljes \"pa punuar\" është:", options: ["pjesore", "paskajore", "mohore", "përcjellore"], correct: 2 },
         { question: "Folja \"mund\" te grupi i fjalëve \"mund të shprehet\" është folje:", options: ["modale", "gjysmëndihmëse", "ndihmëse", "me kuptim të plotë leksikor"], correct: 0 },
-        { question: "Forma e pashtjelluar e foljes \"pa punuar\" është:", options: ["pjesore", "paskajore", "mohore", "përcjellore"], correct: 2 },
         { question: "Kaltërsia e qiellit humbi në muzgun e mbrëmjes, është:", options: ["dykryegjymtyrëshe", "njëkryegjymtyrëshe", "njëkryegjymtyrëshe foljore", "fjalia përcaktore"], correct: 1 },
-        { question: "Dielli i kuq zjarri, është:", options: ["njëkryegjymtyrëshe emërore", "njëkryegjymtyrëshe", "njëkryegjymtyrëshe foljore", "fjalia foljore e zgjeruar"], correct: 0 },
+        { question: "Dielli i kuq zjarr, është:", options: ["njëkryegjymtyrëshe emërore", "njëkryegjymtyrëshe", "njëkryegjymtyrëshe foljore", "fjalia foljore e zgjeruar"], correct: 0 },
         { question: "Diku gjëmon, është:", options: ["njëkryegjymtyrëshe foljore", "njëkryegjymtyrëshe emërore", "dykryegjymtyrëshe e pazgjeruar", "fjalia e plotë"], correct: 0 },
         { question: "Në fjalinë \"Asgjë nuk pipëtinte\", gjymtyra kryesore shprehet me:", options: ["përemër i pacaktuar", "përemër pronor", "përemër lidhor", "përemër dëftor"], correct: 0 },
         { question: "Në fjalinë \"Shkronjat qenë shtypur me dy ngjyra të ndryshme\", kallëzuesi është:", options: ["kallëzues emëror", "kallëzues i përbërë", "kallëzues foljor i thjeshtë", "opsion i plotësuar"], correct: 0 },
-        { question: "Fusha e Rugës Pal, emërton:", options: ["një mjedis loje", "një rrugë", "një fshat", "një mal"], correct: 0 },
+        { question: "Fusha e Rugës Pal, emërton:", options: ["një mjedis loje", "një rrugë", "një fshat", "një mal"], correct: 1 },
         { question: "Fusha e djemve të lumtur të fshatit, është:", options: ["emërore përshkruese", "foljore e zgjeruar", "kallëzore", "njëkryegjymtyrëshe"], correct: 0 },
         { question: "E kuqja e kaltër e magjiplotë qiellore ndërtohet me:", options: ["emër dhe mbiemra", "vetëm emra", "folje dhe emra", "ndajfolje"], correct: 0 },
         { question: "S’kishte kënaqësi më të madhe, gjymtyra e dytë është:", options: ["kundrinor", "përcaktor kallëzuesor", "rrethanor", "kryefjalë"], correct: 1 },
@@ -38,11 +36,11 @@ const allQuestions = {
         { question: "Fjala \"në\" është:", options: ["lidhëz", "parafjalë", "pjesëz", "përemër"], correct: 1 },
         { question: "Fjalia \"Nxënësit mësojnë\" është:", options: ["e thjeshtë", "e përbërë", "pyetëse", "mohuese"], correct: 0 },
         { question: "Cila është folje?", options: ["bukur", "lexoj", "libri", "i madh"], correct: 1 },
-        { question: "Fjala \"ai\" është:", options: ["emër", "mbiemër", "përemër vetor", "lidhëz"], correct: 2 },
         { question: "Cila fjali ka rrethanor vendi?", options: ["Ai lexon librin", "Ai erdhi dje", "Ai shkoi në shkollë", "Ai është nxënës"], correct: 2 },
         { question: "Fjala \"mëson\" është në:", options: ["kohën e shkuar", "kohën e tashme", "kohën e ardhme", "mënyrën lidhore"], correct: 1 },
         { question: "Fjalia \"Të lexosh është mirë\" ka kryefjalë:", options: ["emër", "mbiemër", "folje", "përemër"], correct: 2 }
     ],
+
     drejtshkrimi: [
         { question: "Çfarë studion drejtshkrimi?", options: ["Tingujt e gjuhës", "Shkrimin e saktë të fjalëve dhe shenjave", "Kuptimin e fjalëve", "Formimin e fjalive"], correct: 1 },
         { question: "Kur shkruhet shkronja e madhe?", options: ["Në mes të fjalisë", "Te çdo fjalë", "Në fillim të fjalisë", "Pas presjes"], correct: 2 },
@@ -50,38 +48,36 @@ const allQuestions = {
         { question: "Cila fjali ka përdorim të saktë të presjes?", options: ["Kur erdha në shtëpi gjeta librin.", "Kur erdha, në shtëpi gjeta librin.", "Kur, erdha në shtëpi gjeta librin.", "Kur erdha në shtëpi, gjeta librin."], correct: 3 },
         { question: "Thonjëzat përdoren për:", options: ["Emra vetjakë", "Fjalë të huaja", "Fjalë të cituara", "Numra"], correct: 2 },
         { question: "Cili është shkrimi i saktë i fjalës?", options: ["bashkëpuntor", "bashkëpunëtor", "bashkpunëtor", "bashkëpunetor"], correct: 1 },
-        { question: "Emrat e vendeve shkruhen:", options: ["Me shkronjë të vogël", "Me presje", "Me shkronjë të madhe", "Me thonjëza"], correct: 2 },
-        { question: "Cila fjali është e saktë drejtshkrimisht?", options: ["Sot do shkojmë ne shkollë", "Sot do shkojmë në shkollë.", "Sot do shkojmë në shkollë", "Sot, do shkojmë në shkollë."], correct: 1 },
+        { question: "Emrat e vendeve shkruhen:", options: ["Me shkronjë të vogël", "Me shkronjë të madhe", "Me thonjëza"], correct: 2 },
         { question: "Është shkruar saktë fjala:", options: ["Për së gjalli", "Përsë gjalli", "Për sëgjalli", "Përsëgjalli"], correct: 0 },
-        { question: "Cila fjalë është shkruar saktë?", options: ["Gjithesekush", "Gjithe sekush", "Gjith se kush", "Gjithsekush"], correct: 3 },
+        { question: "Cila fjalë është shkruar saktë?", options: ["Gjithësekush", "Gjithë sekush", "Gjith se kush", "Gjithsekush"], correct: 3 },
         { question: "Cila fjalë është shkruar gabim?", options: ["Gjithsecili", "Kurrkund", "Gjithnjë", "Kurrekush"], correct: 3 },
-        { question: "Cila është shkruar drejt?", options: ["përëndim", "perëndim", "perendim", "përendim"], correct: 1 },
+        { question: "Cila fjalë është shkruar drejt?", options: ["përëndim", "perëndim", "perendim", "përendim"], correct: 1 },
         { question: "Dy pika (:) përdoren për:", options: ["pyetje", "listim", "habi", "mohim"], correct: 1 },
-        { question: "Presja përdoret për:", options: ["ndarje fjalësh", "ndarje fjalisë", "ndarje paragrafësh", "mbyllje teksti"], correct: 1 },
         { question: "Cila është shkruar drejt?", options: ["bashkpunim", "bashkëpunim", "bashkepunim", "bashkpunimi"], correct: 1 }
     ],
+
     leksiologjia: [
         { question: "Dallo fjalën e parme.", options: ["Bregore", "Bregdetar", "Bregdet", "Breg"], correct: 3 },
-        { question: "Sinonim i \"i gëzuar\":", options: ["i mërzitur", "i lumtur", "i lodhur", "i heshtur"], correct: 1 },
-        { question: "Antonim i \"i madh\":", options: ["i gjatë", "i vogël", "i gjerë", "i trashë"], correct: 1 },
+        { question: "Sinonim i fjalës \"i gëzuar\":", options: ["i mërzitur", "i lumtur", "i lodhur", "i heshtur"], correct: 1 },
+        { question: "Antonim i fjalës \"i madh\":", options: ["i gjatë", "i vogël", "i gjerë", "i trashë"], correct: 1 },
         { question: "\"Zemërgur\" ka kuptim:", options: ["të drejtpërdrejtë", "figurativ", "shkencor", "teknik"], correct: 1 },
         { question: "Cila është fjalë e përbërë?", options: ["shtëpi", "nxënës", "kryeqytet", "libër"], correct: 2 },
-        { question: "Sinonim i \"i shpejtë\":", options: ["i ngadaltë", "i vrullshëm", "i vonë", "i lodhur"], correct: 1 },
-        { question: "Antonim i \"i errët\":", options: ["i zi", "i thellë", "i ndritshëm", "i madh"], correct: 2 },
+        { question: "Sinonim i fjalës\"i shpejtë\":", options: ["i ngadaltë", "i vrullshëm", "i vonë", "i lodhur"], correct: 1 },
+        { question: "Antonim i fjalës \"i errët\":", options: ["i zi", "i thellë", "i ndritshëm", "i madh"], correct: 2 },
         { question: "Fjala \"kokëfortë\" është:", options: ["fjalë e thjeshtë", "fjalë e përbërë", "sinonim", "antonim"], correct: 1 },
         { question: "Kuptim figurativ ka fjalia:", options: ["Ai hapi derën", "Ai ka zemër të madhe", "Ai pi ujë", "Ai lexon librin"], correct: 1 },
-        { question: "Sinonim i \"trim\":", options: ["frikacak", "guximtar", "i dobët", "i lodhur"], correct: 1 },
-        { question: "Antonim i \"i pasur\":", options: ["i madh", "i varfër", "i gjerë", "i fortë"], correct: 1 },
+        { question: "Sinonim i  fjalës\"trim\":", options: ["frikacak", "guximtar", "i dobët", "i lodhur"], correct: 1 },
+        { question: "Antonim i fjalës \"i pasur\":", options: ["i madh", "i varfër", "i gjerë", "i fortë"], correct: 1 },
         { question: "Fjala \"mendjehapur\" është:", options: ["e thjeshtë", "e përbërë", "e huaj", "dialektore"], correct: 1 },
-        { question: "Fjala \"dritë\" në \"dritë e jetës\" është:", options: ["kuptim i drejtpërdrejtë", "kuptim figurativ", "ndajfolje", "mbiemër"], correct: 1 },
-        { question: "Sinonim i \"i bukur\":", options: ["i keq", "i shëmtuar", "i hijshëm", "i errët"], correct: 2 },
-        { question: "Antonim i \"fillim\":", options: ["hap", "nisje", "fund", "rrugë"], correct: 2 },
-        { question: "Fjala \"nxënës\" është:", options: ["fjalë e huaj", "fjalë shqipe", "term teknik", "dialektore"], correct: 1 },
-        { question: "Sinonim i \"i zgjuar\":", options: ["i trashë", "i mençur", "i lodhur", "i ngadaltë"], correct: 1 },
-        { question: "Antonim i \"i qetë\":", options: ["i zhurmshëm", "i mirë", "i bukur", "i butë"], correct: 0 },
+        { question: "Sinonim i fjalës\"i bukur\":", options: ["i keq", "i shëmtuar", "i hijshëm", "i errët"], correct: 2 },
+        { question: "Antonim i fjalës\"fillim\":", options: ["hap", "nisje", "fund", "rrugë"], correct: 2 },
+        { question: "Sinonim i fjalës \"i zgjuar\":", options: ["i trashë", "i mençur", "i lodhur", "i ngadaltë"], correct: 1 },
+        { question: "Antonim i fjalës \"i qetë\":", options: ["i zhurmshëm", "i mirë", "i bukur", "i butë"], correct: 0 },
         { question: "Fjala \"shpresë\" ka kuptim:", options: ["konkret", "abstrakt", "teknik", "dialektor"], correct: 1 },
         { question: "\"Krahëhapur\" përdoret zakonisht në kuptim:", options: ["të drejtpërdrejtë", "figurativ", "shkencor", "teknik"], correct: 1 }
     ],
+
     letërsia: [
         { question: "Soneti përbëhet nga:", options: ["Dy strofa treshe dhe një katërshe", "Dy strofa katërshe dhe dy treshe", "Dy strofa dyshe dhe dy katërshe", "Dy strofa treshe dhe dy katërshe"], correct: 0 },
         { question: "Naim Frashëri në 'Bagëti e Bujqësia' ka përdorur:", options: ["Vargun 12 rrokësh", "Vargun 14 rrokësh", "Vargun 16 rrokësh", "Vargun 8 rrokësh"], correct: 1 },
@@ -89,8 +85,6 @@ const allQuestions = {
         { question: "Rretho alternativën e gabuar. Tekstet letrare kanë për qëllim:", options: ["Edukimin artistik të lexuesit", "Edukimin me shijen e së bukurës", "Sjelljen e informacionit", "Të tjerat"], correct: 2 },
         { question: "Cili nga romanet nuk është shkruar nga Dritëro Agolli?", options: ["Prilli i thyer", "Njeriu me top", "Arka e djallit", "Shkëlqimi dhe rënia e shokut Zylo"], correct: 0 },
         { question: "Cili autor është quajtur 'Homeri i letërsisë shqipe'?", options: ["Migjeni", "Lasgush Poradeci", "Gjergj Fishta", "Mitrush Kuteli"], correct: 2 },
-        { question: "Soneti përbëhet nga:", options: ["Dy strofa treshe dhe një katërshe", "Dy strofa katërshe dhe dy treshe", "Dy strofa dyshe dhe dy katërshe", "Dy strofa treshe dhe dy katërshe"], correct: 0 },
-        { question: "Naim Frashëri në 'Bagëti e Bujqësia' ka përdorur:", options: ["Vargun 12 rrokësh", "Vargun 14 rrokësh", "Vargun 10 rrokësh", "Vargun 8 rrokësh"], correct: 1 },
         { question: "Figura letrare: \"Puhia e lehtë rrudhte sipërfaqen e detit\" është:", options: ["epitet", "simbol", "metaforë", "antitezë"], correct: 2 },
         { question: "Kush u zgjodh kryetar te Kongresi i Manastirit?", options: ["Gjergj Fishta", "Parashqevi Qiriazi", "Luigj Gurakuqi", "Mit'hat Frashëri"], correct: 3 },
         { question: "Cila vepër është cilësuar si Iliada shqiptare?", options: ["Bagëti e bujqësi", "Poema e mjerimit", "Lahuta e Malcis", "Martesa e Halilit"], correct: 2 },
@@ -114,7 +108,6 @@ const allQuestions = {
     ]
 };
 
-
 const fjaletEHarruara = [
     { fjala: "Bizë", kuptimi: "Një send me majë të mprehtë që shërben për të qepur" },
     { fjala: "Hosten", kuptimi: "Shkop me majë thumbuese" },
@@ -133,7 +126,7 @@ const fjaletEHarruara = [
     { fjala: "Kamostër", kuptimi: "Grep për të tërhequr drurin në zjarr" },
     { fjala: "Kërcuri", kuptimi: "Dru" },
     { fjala: "Demiroxhak", kuptimi: "Vend për te mbajtur drurët" },
-    { fjala: "Masha", kuptimi: "Kapse per të tërhequr drurin " },
+    { fjala: "Masha", kuptimi: "Kapse për të tërhequr drurin" },
     { fjala: "Finjilla zjarri", kuptimi: "Shpuzë" },
     { fjala: "Shal kali", kuptimi: "Vend për të qëndruar sipër kalit" },
     { fjala: "Hipizëm", kuptimi: "Garë me kuaj" },
@@ -141,7 +134,7 @@ const fjaletEHarruara = [
     { fjala: "Trasta", kuptimi: "Mbajtëse sendesh të qëndrisura me punë dore" },
     { fjala: "Djep", kuptimi: "Krevat për bebet" },
     { fjala: "Shpergenj", kuptimi: "Brez për të lidhur femijët në djepe" },
-    { fjala: "Odat ", kuptimi: "Dhomë për miqtë" },
+    { fjala: "Odat", kuptimi: "Dhomë për miqtë" },
     { fjala: "Postiqe", kuptimi: "Gëzof i deles" },
     { fjala: "Tunci", kuptimi: "Tundëse qumështi" },
     { fjala: "Gyp", kuptimi: "Tub prej druri" },
@@ -157,7 +150,7 @@ const fjaletEHarruara = [
     { fjala: "Shilte", kuptimi: "Dyshek i hollë" },
     { fjala: "Shuk", kuptimi: "Grumbull" },
     { fjala: "Rragë", kuptimi: "Rrobë e vjetër" },
-    { fjala: "Kullostër", kuptimi: "Qumështi i parë pasi lindin bagëtit" },
+    { fjala: "Kullostër", kuptimi: "Qumështi i parë pasi lindin bagëtitë" },
     { fjala: "Axha", kuptimi: "Xhaxhai" },
     { fjala: "Leth", kuptimi: "Baltë" },
     { fjala: "Zall", kuptimi: "Rërë" },
@@ -179,20 +172,20 @@ const fjaletEHarruara = [
 ];
 
 const shprehjeFrazelogjike = [
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" }
+    { shprehja: "Kryq e tërthor", kuptimi: "Pa rregull, në mënyrë të çrregullt" },
+    { shprehja: "Me një frymëmarrje", kuptimi: "Shpejt, menjëherë" },
+    { shprehja: "Në qosh të syrit", kuptimi: "Diçka që nuk shihet mirë" },
+    { shprehja: "Si këpucë e re", kuptimi: "Diçka që është e re dhe e pastër" },
+    { shprehja: "Me dorë në zemër", kuptimi: "Me sinqeritet, me ndershmëri" },
+    { shprehja: "Të jetë me kokë në re", kuptimi: "Të mendojë shumë, të jetë i shpërqendruar" },
+    { shprehja: "Me zë të ulët", kuptimi: "Të flasësh butë, pa zhurmë" },
+    { shprehja: "Me dy fjalë", kuptimi: "Në mënyrë të shkurtër" },
+    { shprehja: "Të ketë dy të vërteta", kuptimi: "Kur dikush e thotë diçka që nuk është e saktë" },
+    { shprehja: "Të marrë frymën", kuptimi: "Të trembet ose të ndalet së foluri" },
+    { shprehja: "Të jetë i mbërthyer", kuptimi: "Të mos lëvizë, të jetë i fiksuar" },
+    { shprehja: "Me gjuhë të gjatë", kuptimi: "Të flasësh shumë" },
+    { shprehja: "Të marrë zemër", kuptimi: "Të fitojë guxim" },
+    { shprehja: "Të bëjë paqe me veten", kuptimi: "Të qetësohet, të mos jetë i tensionuar" }
 ];
 
 let activeQuestions = [];
@@ -288,7 +281,6 @@ function startQuiz(category = null) {
     }
 
     if (allQuestions[category]) {
-        
         const shuffled = [...allQuestions[category]].sort(() => Math.random() - 0.5);
         activeQuestions = shuffled.map(q => sanitizeQuestion(q)).slice(0, 10);
     } else {
@@ -356,7 +348,6 @@ function loadQuestion() {
     qData.options.forEach((opt, index) => {
         const btn = document.createElement('button');
         btn.className = 'option-card text-left p-6 rounded-xl text-lg font-medium w-full flex justify-between items-center group';
-        
         btn.innerHTML = `<span>${opt}</span><span class="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity">→</span>`;
         btn.type = 'button';
         btn.onclick = () => selectOption(index, btn);
