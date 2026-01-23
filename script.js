@@ -45,7 +45,7 @@ const allQuestions = {
     drejtshkrimi: [
         { question: "Çfarë studion drejtshkrimi?", options: ["Tingujt e gjuhës", "Shkrimin e saktë të fjalëve dhe shenjave", "Kuptimin e fjalëve", "Formimin e fjalive"], correct: 2 },
         { question: "Kur shkruhet shkronja e madhe?", options: ["Në mes të fjalisë", "Te çdo fjalë", "Në fillim të fjalisë", "Pas presjes"], correct: 3 },
-        { question: "Cila fjali është shkruar saktë?", options: ["une jetoj ne tirane.", "Une jetoj ne Tirane.", "Unë jetoj në tiranë.", "unë Jetoj në Tiranë."], correct: 2 },
+        { question: "Cila fjali është shkruar saktë?", options: ["une jetoj ne tirane.", "Une jetoj ne Tiranë.", "Unë jetoj në tiranë.", "unë Jetoj në Tiranë."], correct: 2 },
         { question: "Cila fjali ka përdorim të saktë të presjes?", options: ["Kur erdha në shtëpi gjeta librin.", "Kur erdha, në shtëpi gjeta librin.", "Kur, erdha në shtëpi gjeta librin.", "Kur erdha në shtëpi, gjeta librin."], correct: 4 },
         { question: "Thonjëzat përdoren për:", options: ["Emra vetjakë", "Fjalë të huaja", "Fjalë të cituara", "Numra"], correct: 3 },
         { question: "Cili është shkrimi i saktë i fjalës?", options: ["bashkëpuntor", "bashkëpunëtor", "bashkpunëtor", "bashkëpunetor"], correct: 2 },
