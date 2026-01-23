@@ -44,21 +44,13 @@ const allQuestions = {
         { question: "Cila fjalë është shkruar saktë?", options: ["Gjithesekush", "Gjithe sekush", "Gjith se kush", "Gjithsekush"], correct: 3 },
         { question: "Cila fjalë është shkruar gabim?", options: ["Gjithsecili", "Kurrkund", "Gjithnjë", "Kurrekush"], correct: 3 },
         { question: "Cila është shkruar saktë?", options: ["Shkolla ime", "shkolla Ime", "shkolla ime", "Shkolla Ime"], correct: 2 },
-        { question: "Cila fjalë shkruhet me ç?", options: ["cante", "çantë", "carape", "corape"], correct: 1 },
         { question: "Fjalia me presje të saktë është:", options: ["Kur erdhi mësuesi filloi ora", "Kur erdhi, mësuesi filloi ora", "Kur erdhi mësuesi, filloi ora", "Kur, erdhi mësuesi filloi ora"], correct: 2 },
-        { question: "Cila fjalë shkruhet me gj?", options: ["gjuhe", "gjuhë", "guhe", "juhe"], correct: 1 },
-        { question: "Pikëpyetja përdoret në:", options: ["Sa bukur është sot?", "Sa bukur është sot!", "Sa bukur është sot.", "Sa bukur është sot…"], correct: 0 },
         { question: "Cila është shkruar gabim?", options: ["nxënës", "shokë", "mesues", "shkollë"], correct: 2 },
         { question: "Cila fjali mbyllet me pikëçuditëse?", options: ["A po vjen", "Mos ik", "Sa bukur është deti", "Kur erdhi"], correct: 2 },
         { question: "Cila fjalë ka ë të patheksuar?", options: ["dritë", "bukë", "nxënës", "fletore"], correct: 2 },
         { question: "Cila është shkruar drejt?", options: ["përëndim", "perëndim", "perendim", "përendim"], correct: 1 },
         { question: "Dy pika (:) përdoren për:", options: ["pyetje", "listim", "habi", "mohim"], correct: 1 },
-        { question: "Cila fjalë shkruhet me ll?", options: ["shkolle", "mollë", "mule", "male"], correct: 1 },
         { question: "Cila fjali ka pikësim të saktë?", options: ["Ai tha se, do të vijë", "Ai tha se do të vijë", "Ai, tha se do të vijë", "Ai tha, se do të vijë"], correct: 1 },
-        { question: "Cila fjalë shkruhet me dh?", options: ["dhembe", "dhembë", "dembe", "dëmbe"], correct: 1 },
-        { question: "Apostrofi përdoret te fjala:", options: ["shtëpia", "nënë", "s'kam", "libra"], correct: 2 },
-        { question: "Cila është e saktë?", options: ["gjithmon", "gjithmonë", "gjithmonë", "gjithmon"], correct: 1 },
-        { question: "Cila fjalë shkruhet me rr?", options: ["ruga", "rregull", "regull", "rugë"], correct: 1 },
         { question: "Presja përdoret për:", options: ["ndarje fjalësh", "ndarje fjalisë", "ndarje paragrafësh", "mbyllje teksti"], correct: 1 },
         { question: "Cila fjalë ka shkronjë të madhe?", options: ["nxënës", "shqipëri", "Shqipëri", "shqiperi"], correct: 2 },
         { question: "Cila fjali ka pikë në fund?", options: ["A po vjen", "Mos ik!", "Ai po lexon", "Sa bukur!"], correct: 2 },
@@ -109,7 +101,6 @@ const allQuestions = {
         { question: "Tema është:", options: ["personazhi", "ideja kryesore", "vendi", "koha"], correct: 1 },
         { question: "Proza dallon nga poezia sepse:", options: ["ka rimë", "nuk ka vargje", "ka figurë", "ka ndjenja"], correct: 1 },
         { question: "Personazhet dytësore janë:", options: ["kryesorët", "më pak të rëndësishëm", "rrëfimtarë", "autorë"], correct: 1 },
-        { question: "Letërsia shqipe është:", options: ["vetëm moderne", "vetëm e vjetër", "kombëtare", "e huaj"], correct: 2 }
 
     ]
 };
