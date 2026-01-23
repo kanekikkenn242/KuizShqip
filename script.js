@@ -20,7 +20,6 @@ const allQuestions = {
         { question: "Në fjalinë \"Mbaroi së lexuari\", shprehja \"së lexuari\" është:", options: ["Folje", "Mbiemër", "Emër prejfoljor asnjanës", "Ndajfolje"], correct: 2 },
         { question: "Në fjalinë \"Pse më shikon me habi?\", çfarë është \"pse\"?", options: ["Kundrinor i drejtë", "Rrethanor", "Kryefjalë", "Kallëzues"], correct: 1 },
         { question: "Sa përemra ka në këtë fjali: \"Ky libër u kujtonte të gjithëve se çdokush mund ta humbiste veten kur ndodhej në situata të tilla\"?", options: ["4", "5", "6", "7"], correct: 2 },
-        { question: "Cila fjali ka kryefjalë të nënkuptuar?", options: ["Ai lexon librin", "Nxënësi mëson", "Lexoj çdo ditë", "Libri është i ri"], correct: 2 },
         { question: "Fjala \"më\" është:", options: ["emër", "lidhëz", "përemër vetor", "pjesëz"], correct: 2 },
         { question: "Cila fjali është e përbërë?", options: ["Ai po vjen", "Nxënësi lexon", "Ai lexon dhe shkruan", "Libri është interesant"], correct: 2 },
         { question: "Kundrinor i drejtë ka fjalia:", options: ["Ai foli me shokun", "Ai bleu librin", "Ai shkoi në shkollë", "Ai është nxënës"], correct: 1 },
@@ -51,7 +50,6 @@ const allQuestions = {
         { question: "Është shkruar saktë fjala:", options: ["Për së gjalli", "Përsë gjalli", "Për sëgjalli", "Përsëgjalli"], correct: 0 },
         { question: "Cila fjalë është shkruar saktë?", options: ["Gjithësekush", "Gjithë sekush", "Gjith se kush", "Gjithsekush"], correct: 3 },
         { question: "Cila fjalë është shkruar gabim?", options: ["Gjithsecili", "Kurrkund", "Gjithnjë", "Kurrekush"], correct: 3 },
-        { question: "Cila fjalë është shkruar drejt?", options: ["përëndim", "perëndim", "perendim", "përendim"], correct: 1 },
         { question: "Dy pika (:) përdoren për:", options: ["pyetje", "listim", "habi", "mohim"], correct: 1 },
         { question: "Cila është shkruar drejt?", options: ["bashkpunim", "bashkëpunim", "bashkepunim", "bashkpunimi"], correct: 1 }
     ],
