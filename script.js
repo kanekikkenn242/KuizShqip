@@ -20,7 +20,6 @@ const allQuestions = {
         { question: "Në fjalinë \"Mbaroi së lexuari\", shprehja \"së lexuari\" është:", options: ["Folje", "Mbiemër", "Emër prejfoljor asnjanës", "Ndajfolje"], correct: 2 },
         { question: "Në fjalinë \"Pse më shikon me habi?\", çfarë është \"pse\"?", options: ["Kundrinor i drejtë", "Rrethanor", "Kryefjalë", "Kallëzues"], correct: 1 },
         { question: "Sa përemra ka në këtë fjali: \"Ky libër u kujtonte të gjithëve se çdokush mund ta humbiste veten kur ndodhej në situata të tilla\"?", options: ["4", "5", "6", "7"], correct: 2 },
-        { question: "Fjala \"nxënësit\" është:", options: ["emër njëjës", "emër shumës", "mbiemër", "përemër"], correct: 1 },
         { question: "Cila fjali ka kryefjalë të nënkuptuar?", options: ["Ai lexon librin", "Nxënësi mëson", "Lexoj çdo ditë", "Libri është i ri"], correct: 2 },
         { question: "Fjala \"më\" është:", options: ["emër", "lidhëz", "përemër vetor", "pjesëz"], correct: 2 },
         { question: "Cila fjali është e përbërë?", options: ["Ai po vjen", "Nxënësi lexon", "Ai lexon dhe shkruan", "Libri është interesant"], correct: 2 },
@@ -74,13 +73,13 @@ const allQuestions = {
         { question: "Antonim i fjalës\"fillim\":", options: ["hap", "nisje", "fund", "rrugë"], correct: 2 },
         { question: "Sinonim i fjalës \"i zgjuar\":", options: ["i trashë", "i mençur", "i lodhur", "i ngadaltë"], correct: 1 },
         { question: "Antonim i fjalës \"i qetë\":", options: ["i zhurmshëm", "i mirë", "i bukur", "i butë"], correct: 0 },
-        { question: "Fjala \"shpresë\" ka kuptim:", options: ["konkret", "abstrakt", "teknik", "dialektor"], correct: 1 },
+        { question: "Fjala \"shpresë\" ka kuptim:", options: ["konkret", "abstrakt", "i përvecëm", "i përgjithshëm"], correct: 1 },
         { question: "\"Krahëhapur\" përdoret zakonisht në kuptim:", options: ["të drejtpërdrejtë", "figurativ", "shkencor", "teknik"], correct: 1 }
     ],
 
     letërsia: [
         { question: "Cila pjesë i përket ciklit të Kreshnikëve?", options: ["Djali i nënës dhe e Bukura e Dheut", "Dielli dhe Hëna", "Muji dhe Halili", "Halili dhe zanat"], correct: 2 },
-        { question: "Soneti përbëhet nga:", options: ["Dy strofa treshe dhe një katërshe", "Dy strofa katërshe dhe dy treshe", "Dy strofa dyshe dhe dy katërshe", "Dy strofa treshe dhe dy katërshe"], correct: 0 },
+        { question: "Soneti përbëhet nga:", options: ["Dy strofa treshe dhe një katërshe", "Dy strofa katërshe dhe dy treshe", "Dy strofa dyshe dhe dy katërshe", "Dy strofa treshe dhe dy katërshe"], correct: 2 },
         { question: "Naim Frashëri në 'Bagëti e Bujqësia' ka përdorur:", options: ["Vargun 12 rrokësh", "Vargun 14 rrokësh", "Vargun 16 rrokësh", "Vargun 8 rrokësh"], correct: 1 },
         { question: "Rretho alternativën e gabuar. Tekstet letrare kanë për qëllim:", options: ["Edukimin artistik të lexuesit", "Edukimin me shijen e së bukurës", "Sjelljen e informacionit", "Të tjerat"], correct: 2 },
         { question: "Cili nga romanet nuk është shkruar nga Dritëro Agolli?", options: ["Prilli i thyer", "Njeriu me top", "Arka e djallit", "Shkëlqimi dhe rënia e shokut Zylo"], correct: 0 },
