@@ -46,10 +46,8 @@ const allQuestions = {
         { question: "Është shkruar saktë fjala:", options: ["Për së gjalli", "Përsë gjalli", "Për sëgjalli", "Përsëgjalli"], correct: 3 },
         { question: "Cila fjalë është shkruar saktë?", options: ["Gjithesekush", "Gjithe sekush", "Gjith se kush", "Gjithsekush"], correct: 3 },
         { question: "Cila fjalë është shkruar gabim?", options: ["Gjithsecili", "Kurrkund", "Gjithnjë", "Kurrekush"], correct: 3 },
-        { question: "Cila fjalë ka ë të patheksuar?", options: ["dritë", "bukë", "nxënës", "fletore"], correct: 2 },
         { question: "Cila është shkruar drejt?", options: ["përëndim", "perëndim", "perendim", "përendim"], correct: 1 },
         { question: "Dy pika (:) përdoren për:", options: ["pyetje", "listim", "habi", "mohim"], correct: 1 },
-        { question: "Cila fjali ka pikësim të saktë?", options: ["Ai tha se, do të vijë", "Ai tha se do të vijë", "Ai, tha se do të vijë", "Ai tha, se do të vijë"], correct: 1 },
         { question: "Presja përdoret për:", options: ["ndarje fjalësh", "ndarje fjalisë", "ndarje paragrafësh", "mbyllje teksti"], correct: 1 },
         { question: "Cila është shkruar drejt?", options: ["bashkpunim", "bashkëpunim", "bashkepunim", "bashkpunimi"], correct: 1 }
     ],
@@ -59,7 +57,6 @@ const allQuestions = {
         { question: "Antonim i \"i madh\":", options: ["i gjatë", "i vogël", "i gjerë", "i trashë"], correct: 1 },
         { question: "\"Zemërgur\" ka kuptim:", options: ["të drejtpërdrejtë", "figurativ", "shkencor", "teknik"], correct: 1 },
         { question: "Cila është fjalë e përbërë?", options: ["shtëpi", "nxënës", "kryeqytet", "libër"], correct: 2 },
-        { question: "Fjala \"libër\" është:", options: ["e huazuar", "dialektore", "shqipe", "teknike"], correct: 2 },
         { question: "Sinonim i \"i shpejtë\":", options: ["i ngadaltë", "i vrullshëm", "i vonë", "i lodhur"], correct: 1 },
         { question: "Antonim i \"i errët\":", options: ["i zi", "i thellë", "i ndritshëm", "i madh"], correct: 2 },
         { question: "Fjala \"kokëfortë\" është:", options: ["fjalë e thjeshtë", "fjalë e përbërë", "sinonim", "antonim"], correct: 1 },
@@ -77,6 +74,8 @@ const allQuestions = {
         { question: "\"Krahëhapur\" përdoret zakonisht në kuptim:", options: ["të drejtpërdrejtë", "figurativ", "shkencor", "teknik"], correct: 1 }
     ],
     letërsia: [ 
+        { question: "Soneti përbëhet nga:", options: ["Dy strofa treshe dhe një katërshe", "Dy strofa katërshe dhe dy treshe", "Dy strofa dyshe dhe dy katërshe", "Dy strofa treshe dhe dy katërshe"], correct: 1 },
+        { question: "Naim Frashëri në 'Bagëti e Bujqësia' ka përdorur:", options: ["Vargun 12 rrokësh", "Vargun 14 rrokësh", "Vargun 16 rrokësh", "Vargun 8 rrokësh"], correct: 1 },
         { question: "Përkatësoni te Kreshnikëve pjesa:", options: ["Djali i nënës dhe e Bukura e Dheut", "Dielli dhe Hëna", "Muji dhe Halili", "Halili dhe zanat"], correct: 2 },
         { question: "Rretho alternativën e gabuar. Tekstet letrare kanë për qëllim:", options: ["Edukimin artistik të lexuesit", "Edukimin me shijen e së bukurës", "Sjelljen e informacionit", "Pasurimin e imagjinatës"], correct: 2 },
         { question: "Cili nga romanet nuk është shkruar nga Dritëro Agolli?", options: ["Prilli i thyer", "Njeriu me top", "Arka e djallit", "Shkëlqimi dhe rënia e shokut Zylo"], correct: 0 },
@@ -97,7 +96,6 @@ const allQuestions = {
         { question: "\"Mrizi i Zanave\" është vepër e:", options: ["Naim Frashëri", "Migjeni", "Fishta", "Kadare"], correct: 2 },
         { question: "Personazhi kryesor është:", options: ["më pak i rëndësishmi", "ai që shfaqet pak", "qendra e veprës", "rrëfimtari"], correct: 2 },
         { question: "Teksti letrar përdor:", options: ["gjuhë të thatë", "gjuhë figurative", "gjuhë teknike", "rregulla"], correct: 1 },
-        { question: "Migjeni i përket:", options: ["romantizmit", "realizmit", "simbolizmit", "klasicizmit"], correct: 1 },
         { question: "Kadare njihet për:", options: ["poezi lirike", "romane", "drama", "përralla"], correct: 1 },
         { question: "Rima përdoret në:", options: ["prozë", "poezi", "lajm", "tekst shkencor"], correct: 1 },
         { question: "Fabula është:", options: ["morali", "ngjarja kryesore", "përshkrimi", "dialogu"], correct: 1 },
