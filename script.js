@@ -79,9 +79,9 @@ const allQuestions = {
     ],
 
     letërsia: [
+        { question: "Cila pjesë i përket ciklit të Kreshnikëve?", options: ["Djali i nënës dhe e Bukura e Dheut", "Dielli dhe Hëna", "Muji dhe Halili", "Halili dhe zanat"], correct: 2 },
         { question: "Soneti përbëhet nga:", options: ["Dy strofa treshe dhe një katërshe", "Dy strofa katërshe dhe dy treshe", "Dy strofa dyshe dhe dy katërshe", "Dy strofa treshe dhe dy katërshe"], correct: 0 },
         { question: "Naim Frashëri në 'Bagëti e Bujqësia' ka përdorur:", options: ["Vargun 12 rrokësh", "Vargun 14 rrokësh", "Vargun 16 rrokësh", "Vargun 8 rrokësh"], correct: 1 },
-        { question: "Përkatësoni te Kreshnikëve pjesa:", options: ["Djali i nënës dhe e Bukura e Dheut", "Dielli dhe Hëna", "Muji dhe Halili", "Halili dhe zanat"], correct: 2 },
         { question: "Rretho alternativën e gabuar. Tekstet letrare kanë për qëllim:", options: ["Edukimin artistik të lexuesit", "Edukimin me shijen e së bukurës", "Sjelljen e informacionit", "Të tjerat"], correct: 2 },
         { question: "Cili nga romanet nuk është shkruar nga Dritëro Agolli?", options: ["Prilli i thyer", "Njeriu me top", "Arka e djallit", "Shkëlqimi dhe rënia e shokut Zylo"], correct: 0 },
         { question: "Cili autor është quajtur 'Homeri i letërsisë shqipe'?", options: ["Migjeni", "Lasgush Poradeci", "Gjergj Fishta", "Mitrush Kuteli"], correct: 2 },
