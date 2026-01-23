@@ -96,7 +96,7 @@ const allQuestions = {
         { question: "Epika trajton:", options: ["ndjenja", "ngjarje", "urdhra", "përshkrime shkencore"], correct: 1 },
         { question: "Figura letrare në \"koha fluturon\" është:", options: ["krahasim", "metaforë", "epitet", "hiperbolë"], correct: 1 },
         { question: "Fan Noli njihet si:", options: ["poet vetëm", "shkrimtar dhe përkthyes", "dramaturg", "romancier"], correct: 1 },
-        { question: "\"Mrizi i Zanave\" është vepër e:", options: ["Naim Frashëri", "Migjeni", "Fishta", "Kadare"], correct: 2 },
+        { question: "\"Mrizi i Zanave\" është vepër e:", options: ["Naim Frashëri", "Migjeni", "Gjergj Fishta", "Ismail Kadare"], correct: 2 },
         { question: "Personazhi kryesor është:", options: ["më pak i rëndësishmi", "ai që shfaqet pak", "qendra e veprës", "rrëfimtari"], correct: 2 },
         { question: "Teksti letrar përdor:", options: ["gjuhë të thatë", "gjuhë figurative", "gjuhë teknike", "rregulla"], correct: 1 },
         { question: "Kadare njihet për:", options: ["poezi lirike", "romane", "drama", "përralla"], correct: 1 },
