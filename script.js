@@ -71,7 +71,7 @@ const allQuestions = {
         { question: "Antonim i fjalës\"fillim\":", options: ["hap", "nisje", "fund", "rrugë"], correct: 2 },
         { question: "Sinonim i fjalës \"i zgjuar\":", options: ["i trashë", "i mençur", "i lodhur", "i ngadaltë"], correct: 1 },
         { question: "Antonim i fjalës \"i qetë\":", options: ["i zhurmshëm", "i mirë", "i bukur", "i butë"], correct: 0 },
-        { question: "Fjala \"shpresë\" ka kuptim:", options: ["konkret", "abstrakt", "i përvecëm", "i përgjithshëm"], correct: 1 },
+        { question: "Fjala \"shpresë\" ka kuptim:", options: ["konkret", "abstrakt", "i përveçëm", "i përgjithshëm"], correct: 1 },
         { question: "\"Krahëhapur\" përdoret zakonisht në kuptim:", options: ["të drejtpërdrejtë", "figurativ", "shkencor", "teknik"], correct: 1 }
     ],
 
@@ -128,13 +128,13 @@ const fjaletEHarruara = [
     { fjala: "Hebe", kuptimi: "Mbajtëse sendesh" },
     { fjala: "Trasta", kuptimi: "Mbajtëse sendesh të qëndrisura me punë dore" },
     { fjala: "Djep", kuptimi: "Krevat për bebet" },
-    { fjala: "Shpergenj", kuptimi: "Brez për të lidhur femijët në djepe" },
+    { fjala: "Shpërgenj", kuptimi: "Brez për të lidhur fëmijët në djepe" },
     { fjala: "Odat", kuptimi: "Dhomë për miqtë" },
     { fjala: "Postiqe", kuptimi: "Gëzof i deles" },
     { fjala: "Tunci", kuptimi: "Tundëse qumështi" },
     { fjala: "Gyp", kuptimi: "Tub prej druri" },
     { fjala: "Korbulla", kuptimi: "Vend për të ruajtur produktet bulmore" },
-    { fjala: "Gajtanr", kuptimi: "Fije e trashë" },
+    { fjala: "Gajtan", kuptimi: "Fije e trashë" },
     { fjala: "Qylaf", kuptimi: "Kapele" },
     { fjala: "Shtagë", kuptimi: "Shkop druri" },
     { fjala: "Çerep", kuptimi: "Enë balte për pjekje mbi zjarr" },
@@ -167,20 +167,23 @@ const fjaletEHarruara = [
 ];
 
 const shprehjeFrazelogjike = [
-    { shprehja: "Kryq e tërthor", kuptimi: "Pa rregull, në mënyrë të çrregullt" },
-    { shprehja: "Me një frymëmarrje", kuptimi: "Shpejt, menjëherë" },
-    { shprehja: "Në qosh të syrit", kuptimi: "Diçka që nuk shihet mirë" },
-    { shprehja: "Si këpucë e re", kuptimi: "Diçka që është e re dhe e pastër" },
-    { shprehja: "Me dorë në zemër", kuptimi: "Me sinqeritet, me ndershmëri" },
-    { shprehja: "Të jetë me kokë në re", kuptimi: "Të mendojë shumë, të jetë i shpërqendruar" },
-    { shprehja: "Me zë të ulët", kuptimi: "Të flasësh butë, pa zhurmë" },
-    { shprehja: "Me dy fjalë", kuptimi: "Në mënyrë të shkurtër" },
-    { shprehja: "Të ketë dy të vërteta", kuptimi: "Kur dikush e thotë diçka që nuk është e saktë" },
-    { shprehja: "Të marrë frymën", kuptimi: "Të trembet ose të ndalet së foluri" },
-    { shprehja: "Të jetë i mbërthyer", kuptimi: "Të mos lëvizë, të jetë i fiksuar" },
-    { shprehja: "Me gjuhë të gjatë", kuptimi: "Të flasësh shumë" },
-    { shprehja: "Të marrë zemër", kuptimi: "Të fitojë guxim" },
-    { shprehja: "Të bëjë paqe me veten", kuptimi: "Të qetësohet, të mos jetë i tensionuar" }
+    { shprehja: "", kuptimi: "" },
+    { shprehja: "", kuptimi: "" },
+    { shprehja: "", kuptimi: "" },
+    { shprehja: "", kuptimi: "" },
+    { shprehja: "", kuptimi: "" },
+    { shprehja: "", kuptimi: "" },
+    { shprehja: "", kuptimi: "" },
+    { shprehja: "", kuptimi: "" },
+    { shprehja: "", kuptimi: "" },
+    { shprehja: "", kuptimi: "" },
+    { shprehja: "", kuptimi: "" },
+    { shprehja: "", kuptimi: "" },
+    { shprehja: "", kuptimi: "" },
+    { shprehja: "", kuptimi: "" },
+    { shprehja: "", kuptimi: "" },
+    { shprehja: "", kuptimi: "" },
+    
 ];
 
 let activeQuestions = [];
