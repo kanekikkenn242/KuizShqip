@@ -43,6 +43,14 @@ const allQuestions = {
         { question: "Fjalia \"Të lexosh është mirë\" ka kryefjalë:", options: ["emër", "mbiemër", "folje", "përemër"], correct: 2 }
     ],
     drejtshkrimi: [
+        { question: "Çfarë studion drejtshkrimi?", options: ["Tingujt e gjuhës", "Shkrimin e saktë të fjalëve dhe shenjave", "Kuptimin e fjalëve", "Formimin e fjalive"], correct: 2 },
+        { question: "Kur shkruhet shkronja e madhe?", options: ["Në mes të fjalisë", "Te çdo fjalë", "Në fillim të fjalisë", "Pas presjes"], correct: 3 },
+        { question: "Cila fjali është shkruar saktë?", options: ["une jetoj ne tirane.", "Une jetoj ne Tirane.", "Unë jetoj në tiranë.", "unë Jetoj në Tiranë."], correct: 2 },
+        { question: "Cila fjali ka përdorim të saktë të presjes?", options: ["Kur erdha në shtëpi gjeta librin.", "Kur erdha, në shtëpi gjeta librin.", "Kur, erdha në shtëpi gjeta librin.", "Kur erdha në shtëpi, gjeta librin."], correct: 4 },
+        { question: "Thonjëzat përdoren për:", options: ["Emra vetjakë", "Fjalë të huaja", "Fjalë të cituara", "Numra"], correct: 3 },
+        { question: "Cili është shkrimi i saktë i fjalës?", options: ["bashkëpuntor", "bashkëpunëtor", "bashkpunëtor", "bashkëpunetor"], correct: 2 },
+        { question: "Emrat e vendeve shkruhen:", options: ["Me shkronjë të vogël", "Me presje", "Me shkronjë të madhe", "Me thonjëza"], correct: 3 },
+        { question: "Cila fjali është e saktë drejtshkrimisht?", options: ["Sot do shkojmë ne shkollë", "Sot do shkojmë në shkollë.", "Sot do shkojmë në shkollë", "Sot, do shkojmë në shkollë."], correct: 2 },
         { question: "Është shkruar saktë fjala:", options: ["Për së gjalli", "Përsë gjalli", "Për sëgjalli", "Përsëgjalli"], correct: 3 },
         { question: "Cila fjalë është shkruar saktë?", options: ["Gjithesekush", "Gjithe sekush", "Gjith se kush", "Gjithsekush"], correct: 3 },
         { question: "Cila fjalë është shkruar gabim?", options: ["Gjithsecili", "Kurrkund", "Gjithnjë", "Kurrekush"], correct: 3 },
