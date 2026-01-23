@@ -109,7 +109,6 @@ const fjaletEHarruara = [
     { fjala: "Masha", kuptimi: "Kapse për të tërhequr drurin" },
     { fjala: "Finjilla zjarri", kuptimi: "Shpuzë" },
     { fjala: "Shal kali", kuptimi: "Vend për të qëndruar sipër kalit" },
-    { fjala: "Hipizëm", kuptimi: "Garë me kuaj" },
     { fjala: "Hebe", kuptimi: "Mbajtëse sendesh" },
     { fjala: "Trasta", kuptimi: "Mbajtëse sendesh të qëndrisura me punë dore" },
     { fjala: "Djep", kuptimi: "Krevat për bebet" },
@@ -131,10 +130,8 @@ const fjaletEHarruara = [
     { fjala: "Shuk", kuptimi: "Grumbull" },
     { fjala: "Rragë", kuptimi: "Rrobë e vjetër" },
     { fjala: "Kullostër", kuptimi: "Qumështi i parë pasi lindin bagëtitë" },
-    { fjala: "Axha", kuptimi: "Xhaxhai" },
     { fjala: "Leth", kuptimi: "Baltë" },
     { fjala: "Zall", kuptimi: "Rërë" },
-    { fjala: "Korit", kuptimi: "Turpëroj" },
     { fjala: "Gjol", kuptimi: "Liqen" },
     { fjala: "Rruguz", kuptimi: "Tapet" },
     { fjala: "Xhoke", kuptimi: "Xhaketë" },
@@ -142,34 +139,15 @@ const fjaletEHarruara = [
     { fjala: "Sojë", kuptimi: "Fis, prejardhje" },
     { fjala: "Bavë", kuptimi: "Sëmundje" },
     { fjala: "Andë", kuptimi: "Brenda" },
-    { fjala: "Vobekti", kuptimi: "Varfëri" },
     { fjala: "Kusi", kuptimi: "Enë balte për gatim mbi zjarr" },
-    { fjala: "Kallaballëk", kuptimi: "Shumë njerëz, grumbull" },
     { fjala: "Trog", kuptimi: "Enë druri ku hanë bagëtitë" },
     { fjala: "Vrragë", kuptimi: "Plagë e vjetër" },
     { fjala: "Kacek", kuptimi: "Copë bukë e fortë" },
-    { fjala: "Sahan", kuptimi: "Pjatë metalike" }
+    { fjala: "Sahan", kuptimi: "Pjatë metalike" },
+    { fjala: "Zgjedhë", kuptimi: "Pajisje prej druri që vendosej te kafshët për të mundësuar tërheqjen e qerres" }
 ];
 
-const shprehjeFrazelogjike = [
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    { shprehja: "", kuptimi: "" },
-    
-];
+
 
 let activeQuestions = [];
 let currentQuestion = 0;
