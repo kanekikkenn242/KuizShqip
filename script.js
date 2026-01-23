@@ -1,6 +1,7 @@
 const allQuestions = {
     gramatika: [
-        { question: "Në fjalinë \"Doli qiellit hëna e trishtë\" emri qiellit është në:", options: ["Rasën gjinore, trajta e pashquar", "Rasën dhanore, trajta e shquar", "Rasën rrjedhore, trajta e shquar", "Rasën kallëzore, trajta e pashquar"], correct: 1 },
+        { question: "Kur fjala \"kush\" është përdorur si përemër lidhor?", options: ["Kush u jep këshilla lexuesve të rinj?", "A e ka parë kush këtë film?", "Kush shkruan autobiografi, shkruan librat më të mirë?"], correct: 2 },
+        { question: "Në fjalinë \"Doli qiellit hëna e trishtë\" emri qiellit është në:", options: ["Rasën gjinore, trajta e pashquar", "Rasën dhanore, trajta e shquar", "Rasën rrjedhore, trajta e shquar", "Rasën kallëzore, trajta e pashquar"], correct: 2 },
         { question: "Cili përemër është futur gabim sipas llojit?", options: ["Dëshirën e vet", "Mendimet e tyre", "Ditë të tjera", "Zëri i saj"], correct: 2 },
         { question: "“Ju hapa zemrën, se më krijuat besim.” është fjali me nënrenditje:", options: ["Ftilluese", "Kundrinore", "Kryefjalore", "Shkakore"], correct: 3 },
         { question: "Cila fjali është e thjeshtë?", options: ["Ai filloi të fliste.", "E dija ku do të dilje.", "Shkoi që të niste një jetë të re.", "Prisni sa të pushojë shiu"], correct: 0 },
@@ -20,7 +21,6 @@ const allQuestions = {
         { question: "Fjala \"të\" në \"dua të lexoj\" është:", options: ["përemër", "parafjalë", "pjesëz", "lidhëz"], correct: 2 },
         { question: "Fjala \"në\" është:", options: ["lidhëz", "parafjalë", "pjesëz", "përemër"], correct: 1 },
         { question: "Cila fjali ka rrethanor vendi?", options: ["Ai lexon librin", "Ai erdhi dje", "Ai shkoi në shkollë", "Ai është nxënës"], correct: 2 },
-        { question: "Fjala \"mëson\" është në:", options: ["kohën e shkuar", "kohën e tashme", "kohën e ardhme", "mënyrën lidhore"], correct: 1 },
     ],
 
     drejtshkrimi: [
@@ -60,8 +60,9 @@ const allQuestions = {
     ],
 
     letërsia: [
-        { question: "Cila pjesë i përket ciklit të Kreshnikëve?", options: ["Djali i nënës dhe e Bukura e Dheut", "Dielli dhe Hëna", "Muji dhe Halili", "Halili dhe zanat"], correct: 2 },
-        { question: "Soneti përbëhet nga:", options: ["Dy strofa treshe dhe një katërshe", "Dy strofa katërshe dhe dy treshe", "Dy strofa dyshe dhe dy katërshe", "Dy strofa treshe dhe dy katërshe"], correct: 2 },
+        { question: "Dallo fjalën e urtë.", options: ["E priti hundë e buzë", "S'le dy gurë bashkë", "E gjykon puna, s'e gjykon guna.", "Heq të zitë e ullirit"], correct: 2 },
+        { question: "Cila pjesë i përket ciklit të Kreshnikëve?", options: ["Djali i nënës dhe e Bukura e Dheut", "Dielli dhe Hëna", "Muji dhe Halili"], correct: 2 },
+        { question: "Soneti përbëhet nga:", options: ["Dy strofa treshe dhe një katërshe", "Dy strofa katërshe dhe dy treshe", "Dy strofa dyshe dhe dy katërshe", "Dy strofa treshe dhe dy katërshe"], correct: 1 },
         { question: "Naim Frashëri në 'Bagëti e Bujqësia' ka përdorur:", options: ["Vargun 12 rrokësh", "Vargun 14 rrokësh", "Vargun 16 rrokësh", "Vargun 8 rrokësh"], correct: 1 },
         { question: "Rretho alternativën e gabuar. Tekstet letrare kanë për qëllim:", options: ["Edukimin artistik të lexuesit", "Edukimin me shijen e së bukurës", "Sjelljen e informacionit", "Të tjerat"], correct: 2 },
         { question: "Cili nga romanet nuk është shkruar nga Dritëro Agolli?", options: ["Prilli i thyer", "Njeriu me top", "Arka e djallit", "Shkëlqimi dhe rënia e shokut Zylo"], correct: 0 },
