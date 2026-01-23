@@ -16,7 +16,7 @@ const allQuestions = {
         { question: "Në fjalinë \"Ku shkon?\", fjala \"ku\" është:", options: ["Pjesëz", "Lidhëz", "Ndajfolje", "Pasthirrje"], correct: 2 },
         { question: "Në fjalinë \"Mbaroi së lexuari\", shprehja \"së lexuari\" është:", options: ["Folje", "Mbiemër", "Emër prejfoljor asnjanës", "Ndajfolje"], correct: 2 },
         { question: "Në fjalinë \"Pse më shikon me habi?\", çfarë është fjala \"pse\"?", options: ["Kundrinor i drejtë", "Rrethanor", "Kryefjalë", "Kallëzues"], correct: 1 },
-        { question: "Sa përemra ka në këtë fjali: \"Ky libër u kujtonte të gjithëve se çdokush mund ta humbiste veten kur ndodhej në situata të tilla\"?", options: ["4", "5", "6", "7"], correct: 2 },
+        { question: "Sa përemra ka në këtë fjali: \"Ky libër u kujtonte të gjithëve se çdokush mund ta humbiste veten kur ndodhej në situata të tilla\"?", options: ["4", "5", "6", "7"], correct: 1 },
         { question: "Cila fjali është e përbërë?", options: ["Ai po vjen", "Nxënësi lexon", "Ai lexon dhe shkruan", "Libri është interesant"], correct: 2 },
         { question: "Fjala \"të\" në \"dua të lexoj\" është:", options: ["përemër", "parafjalë", "pjesëz", "lidhëz"], correct: 2 },
         { question: "Fjala \"në\" është:", options: ["lidhëz", "parafjalë", "pjesëz", "përemër"], correct: 1 },
@@ -34,7 +34,7 @@ const allQuestions = {
         { question: "Cila fjalë është shkruar saktë?", options: ["Gjithësekush", "Gjithë sekush", "Gjith se kush", "Gjithsekush"], correct: 3 },
         { question: "Cila fjalë është shkruar gabim?", options: ["Gjithsecili", "Kurrkund", "Gjithnjë", "Kurrekush"], correct: 3 },
         { question: "Dy pika (:) përdoren për:", options: ["pyetje", "listim", "habi", "mohim"], correct: 1 },
-        { question: "Cila është shkruar drejt?", options: ["bashkpunim", "bashkëpunim", "bashkepunim", "bashkpunimi"], correct: 1 }
+        { question: "Cila është shkruar drejt?", options: ["bashkpunim", "bashkëpunim", "bashkë punim",], correct: 1 }
     ],
 
     leksiologjia: [
