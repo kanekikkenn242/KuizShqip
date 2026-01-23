@@ -1,5 +1,7 @@
 const allQuestions = {
     gramatika: [
+        { question: "Në fjalinë \"Doli qiellit hëna e trishtë\" emri qiellit është në:", options: ["Rasën gjinore, trajta e pashquar", "Rasën dhanore, trajta e shquar", "Rasën rrjedhore, trajta e shquar", "Rasën kallëzore, trajta e pashquar"], correct: 1 },
+        { question: "Cili përemër është futur gabim sipas llojit?", options: ["Dëshirën e vet", "Mendimet e tyre", "Ditë të tjera", "Zëri i saj"], correct: 2 },
         { question: "“Ju hapa zemrën, se më krijuat besim.” është fjali me nënrenditje:", options: ["Ftilluese", "Kundrinore", "Kryefjalore", "Shkakore"], correct: 3 },
         { question: "Cila fjali është e thjeshtë?", options: ["Ai filloi të fliste.", "E dija ku do të dilje.", "Shkoi që të niste një jetë të re.", "Prisni sa të pushojë shiu"], correct: 0 },
         { question: "Forma e pashtjelluar e foljes \"pa punuar\" është:", options: ["pjesore", "paskajore", "mohore", "përcjellore"], correct: 2 },
@@ -24,6 +26,7 @@ const allQuestions = {
     ],
 
     drejtshkrimi: [
+        { question: "Cila fjalë është shkruar saktë?", options: ["I herëpas hershëm", "I herë pas hershëm", "I herëpashershēm", "I herë pashershëm"], correct: 2 },
         { question: "Çfarë studion drejtshkrimi?", options: ["Tingujt e gjuhës", "Shkrimin e saktë të fjalëve dhe shenjave", "Kuptimin e fjalëve", "Formimin e fjalive"], correct: 1 },
         { question: "Kur shkruhet shkronja e madhe?", options: ["Në mes të fjalisë", "Te çdo fjalë", "Në fillim të fjalisë", "Pas presjes"], correct: 2 },
         { question: "Cila fjali është shkruar saktë?", options: ["une jetoj ne tirane.", "Une jetoj ne Tiranë.", "Unë jetoj në Tiranë.", "unë Jetoj në Tiranë."], correct: 2 },
@@ -37,6 +40,7 @@ const allQuestions = {
     ],
 
     leksiologjia: [
+        { question: "Fjala \"i pabesueshëm\" është:", options: ["E thjeshtë", "E përbërë", "E prejardhur", "E përngjitur"], correct: 3 },
         { question: "Dallo fjalën e parme.", options: ["Bregore", "Bregdetar", "Bregdet", "Breg"], correct: 3 },
         { question: "Sinonim i fjalës \"i gëzuar\":", options: ["i mërzitur", "i lumtur", "i lodhur", "i heshtur"], correct: 1 },
         { question: "Antonim i fjalës \"i madh\":", options: ["i gjatë", "i vogël", "i gjerë", "i trashë"], correct: 1 },
