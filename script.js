@@ -11,7 +11,6 @@ const allQuestions = {
         { question: "Diku gjëmon, është fjali:", options: ["njëkryegjymtyrëshe foljore", "njëkryegjymtyrëshe emërore", "dykryegjymtyrëshe e pazgjeruar", "fjalia e plotë"], correct: 0 },
         { question: "Në fjalinë \"Asgjë nuk pipëtinte\", gjymtyra kryesore shprehet me:", options: ["përemër i pacaktuar", "përemër pronor", "përemër lidhor", "përemër dëftor"], correct: 0 },
         { question: "Në fjalinë \"Shkronjat qenë shtypur me dy ngjyra të ndryshme\", kallëzuesi është:", options: ["kallëzues emëror", "kallëzues i përbërë", "kallëzues foljor i thjeshtë", "opsion i plotësuar"], correct: 0 },
-        { question: "Fusha e djemve të lumtur të fshatit, është:", options: ["emërore përshkruese", "foljore e zgjeruar", "kallëzore", "njëkryegjymtyrëshe"], correct: 0 },
         { question: "S’kishte kënaqësi më të madhe, gjymtyra e dytë është:", options: ["kundrinor", "përcaktor kallëzuesor", "rrethanor", "kryefjalë"], correct: 1 },
         { question: "Në fjalinë \"Ku shkon?\", fjala \"ku\" është:", options: ["Pjesëz", "Lidhëz", "Ndajfolje", "Pasthirrje"], correct: 2 },
         { question: "Në fjalinë \"Mbaroi së lexuari\", shprehja \"së lexuari\" është:", options: ["Folje", "Mbiemër", "Emër prejfoljor asnjanës", "Ndajfolje"], correct: 2 },
