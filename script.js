@@ -120,7 +120,7 @@ const fjaletEHarruara = [
     { fjala: "Gajtan", kuptimi: "Fije e trashë" },
     { fjala: "Qylaf", kuptimi: "Kapele" },
     { fjala: "Shtagë", kuptimi: "Shkop druri" },
-    { fjala: "Çerep", kuptimi: "Enë balte për pjekje mbi zjarr" },
+    { fjala: "Saç", kuptimi: "Enë balte për pjekje mbi zjarr" },
     { fjala: "Mriz", kuptimi: "Hije ku pushojnë bagëtitë" },
     { fjala: "Havale", kuptimi: "Shqetësim" },
     { fjala: "Grazhd", kuptimi: "Vendi ku hanë bagëtitë" },
